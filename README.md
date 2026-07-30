@@ -99,6 +99,21 @@ output captured back. Includes the 59 commands that only exist at runtime and ar
 missed by lists built from static scans — `addcharacter` among them.
 
 ### Tools & Cheats
+Around 60 cheats as **one-click toggles** — click once for on, click again for off,
+green when on and red when off. No separate on/off buttons to hunt through. The dozen
+you actually reach for are on the panel; the rest are behind **Show more commands**,
+grouped by Player / World & time / Building / Enemies & NPCs / Items / Display.
+One-shot actions (`buffstats`, `finishblueprints`, `clearpickups`…) stay uncoloured,
+because they have no state to be in.
+
+Two things the colour is honest about. The console offers no way to ask "is godmode on
+right now?", so for console toggles the colour reflects what the app has sent — toggle
+the same thing from the in-game console and it will drift; **Re-sync** re-reads the
+states that genuinely can be read and baselines the rest. And a command that fails
+never turns green.
+
+Also here:
+
 - **Cheat gate bypass** — the console normally refuses to work without cheats enabled,
   and refuses again when you're not the host. This re-opens it.
 - **Spawn unlock** — 60 items (artifact pieces, blueprints, story notes) carry a
@@ -106,7 +121,8 @@ missed by lists built from static scans — `addcharacter` among them.
   through the real console command, which means they replicate in multiplayer.
 - **Restored commands** — `buildhack` was removed from the console but its machinery
   still exists on `StructureCraftingSystem`. It's revived here as
-  `restored.buildhack`, along with `restored.instantbuild`.
+  `restored.buildhack`, along with `restored.instantbuild`, and both report their real
+  state back rather than being tracked blind.
 
 ### Multiplayer
 Works in multiplayer. Spawning picks a strategy automatically: direct instantiation in
@@ -191,8 +207,12 @@ generated interop assemblies).
 
 ```bash
 dotnet build plugin/LiveEditor/LiveEditor.csproj -c Release
-dotnet publish app/LiveEditorApp/LiveEditorApp.csproj -c Release -o dist/app
+dotnet publish app/LiveEditorApp/LiveEditorApp.csproj -c Release -r win-x64 --self-contained -o dist/app
 ```
+
+`-r win-x64 --self-contained` is passed on the command line rather than set in the
+csproj on purpose: on .NET 6 those properties also apply to `dotnet build`, which moves
+build output into a `win-x64/` subfolder and leaves a stale executable at the old path.
 
 The plugin build copies itself into your `Mods\` folder automatically. The game folder
 is detected the same way the installer does it; override with `-p:GameDir="..."` or the

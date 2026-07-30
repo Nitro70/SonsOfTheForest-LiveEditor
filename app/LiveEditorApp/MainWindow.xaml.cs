@@ -87,8 +87,14 @@ public partial class MainWindow : Window
         {
             Log($"[event] {name} {data?.ToJsonString() ?? ""}");
             if (name is "world.entered" or "world.exited" or "session.changed") _ = RefreshStateAsync();
+
+            // Leaving a world drops every console toggle back to off, so holding on to
+            // the old colours would leave the panel claiming cheats that are no longer
+            // active in the session you load next.
+            if (name is "world.exited" or "world.entered") ResetCheatColours();
         });
 
+        BuildCheatButtons();
         Loaded += async (_, _) => await TryConnectAsync();
     }
 
@@ -500,14 +506,6 @@ public partial class MainWindow : Window
         CmdOutput.ScrollToEnd();
     }
 
-    private async void OnQuickCheat(object sender, RoutedEventArgs e)
-    {
-        if (sender is not Button b || b.Tag is not string line) return;
-        var r = await _client.SendAsync("console.exec", new JsonObject { ["line"] = line });
-        Log($"console.exec \"{line}\" -> {r.Describe()}");
-        Status(r.Ok ? $"Ran {line}." : r.Describe());
-    }
-
     // ---------- item modules ----------
 
     /// <summary>
@@ -812,24 +810,163 @@ public partial class MainWindow : Window
         if (r.Ok) await LoadItemsAsync();
     }
 
-    private async void OnBuildhackOnClick(object sender, RoutedEventArgs e) => await BuildhackAsync(true);
-    private async void OnBuildhackOffClick(object sender, RoutedEventArgs e) => await BuildhackAsync(false);
+    // ---------- cheat toggles ----------
 
-    private async Task BuildhackAsync(bool on)
+    private readonly Dictionary<string, bool> _cheatOn = new();
+    private readonly Dictionary<string, Button> _cheatButtons = new();
+
+    /// <summary>
+    /// Builds the cheat buttons from <see cref="CheatDef.All"/>. Generated rather than
+    /// declared in XAML so the extended set can be grouped and hidden behind one flag
+    /// instead of being duplicated in markup.
+    /// </summary>
+    private void BuildCheatButtons()
     {
-        var r = await _client.SendAsync("restored.buildhack", new JsonObject { ["enabled"] = on });
-        Log($"restored.buildhack {on} -> {r.Describe()}");
-        Status(r.Ok ? $"buildhack infiniteItems={r.Result?["infiniteItems"]}" : r.Describe());
+        foreach (var def in CheatDef.All.Where(d => d.Core))
+            CheatCorePanel.Children.Add(MakeCheatButton(def));
+
+        foreach (var group in CheatDef.All.Where(d => !d.Core).GroupBy(d => d.Group))
+        {
+            CheatMoreSection.Children.Add(new TextBlock
+            {
+                Text = group.Key,
+                FontWeight = FontWeights.SemiBold,
+                Margin = new Thickness(0, 6, 0, 4),
+            });
+
+            var panel = new WrapPanel { Margin = new Thickness(0, 0, 0, 8) };
+            foreach (var def in group) panel.Children.Add(MakeCheatButton(def));
+            CheatMoreSection.Children.Add(panel);
+        }
     }
 
-    private async void OnInstantBuildOnClick(object sender, RoutedEventArgs e) => await InstantBuildAsync(true);
-    private async void OnInstantBuildOffClick(object sender, RoutedEventArgs e) => await InstantBuildAsync(false);
-
-    private async Task InstantBuildAsync(bool on)
+    private Button MakeCheatButton(CheatDef def)
     {
-        var r = await _client.SendAsync("restored.instantbuild", new JsonObject { ["enabled"] = on });
-        Log($"restored.instantbuild {on} -> {r.Describe()}");
-        Status(r.Ok ? $"instantBuild={r.Result?["instantBuild"]}" : r.Describe());
+        var b = new Button
+        {
+            Content = def.Label,
+            Style = (Style)FindResource("CheatButton"),
+            Tag = def,
+            ToolTip = def.Tip is null ? def.Command : $"{def.Command}\n{def.Tip}",
+        };
+        b.Click += OnCheatClick;
+
+        _cheatButtons[def.Command] = b;
+        if (def.HasState) PaintCheat(def, false);
+        return b;
+    }
+
+    private void PaintCheat(CheatDef def, bool on)
+    {
+        if (!_cheatButtons.TryGetValue(def.Command, out var b)) return;
+
+        _cheatOn[def.Command] = on;
+        b.Background = (Brush)FindResource(on ? "OnFill" : "OffFill");
+        b.BorderBrush = (Brush)FindResource(on ? "OnEdge" : "OffEdge");
+        b.Foreground = (Brush)FindResource(on ? "OnText" : "OffText");
+        b.Content = on ? $"{def.Label}  ●" : def.Label;
+    }
+
+    private async void OnCheatClick(object sender, RoutedEventArgs e)
+    {
+        if (sender is not Button { Tag: CheatDef def }) return;
+
+        if (def.Kind == CheatKind.Action)
+        {
+            var ar = await _client.SendAsync("console.exec", new JsonObject { ["line"] = def.Command });
+            Log($"console.exec \"{def.Command}\" -> {ar.Describe()}");
+            Status(ar.Ok ? $"Ran {def.Command}." : ar.Describe());
+            return;
+        }
+
+        var want = !_cheatOn.GetValueOrDefault(def.Command);
+        var (ok, detail) = await SetCheatAsync(def, want);
+
+        // Only paint the new state if the call actually went through; a failed toggle
+        // that still turned the button green would be lying about the game.
+        if (ok) { PaintCheat(def, want); Status($"{def.Label}: {(want ? "ON" : "OFF")}{detail}"); }
+        else Status($"{def.Label} failed — {detail}");
+    }
+
+    private async Task<(bool ok, string detail)> SetCheatAsync(CheatDef def, bool on)
+    {
+        if (def.Kind == CheatKind.Plugin)
+        {
+            var pr = await _client.SendAsync(def.Command, new JsonObject { ["enabled"] = on });
+            Log($"{def.Command} {on} -> {pr.Describe()}");
+            if (!pr.Ok) return (false, pr.Describe());
+
+            // These report the field back, so the button can show the truth.
+            var real = pr.Result?["infiniteItems"]?.GetValue<bool>()
+                       ?? pr.Result?["instantBuild"]?.GetValue<bool>();
+            return (true, real is null || real == on ? "" : $" (game reports {real})");
+        }
+
+        // Flip commands take no argument — the game toggles them itself, so all the
+        // app can do is send the bare command and track parity.
+        var line = def.Kind == CheatKind.Flip ? def.Command : $"{def.Command} {(on ? "on" : "off")}";
+        var r = await _client.SendAsync("console.exec", new JsonObject { ["line"] = line });
+        Log($"console.exec \"{line}\" -> {r.Describe()}");
+        return r.Ok ? (true, "") : (false, r.Describe());
+    }
+
+    private void OnShowMoreCheatsClick(object sender, RoutedEventArgs e)
+    {
+        var showing = CheatMoreSection.Visibility == Visibility.Visible;
+        CheatMoreSection.Visibility = showing ? Visibility.Collapsed : Visibility.Visible;
+        ShowMoreButton.Content = showing ? "Show more commands  ▾" : "Hide extra commands  ▴";
+    }
+
+    private void ResetCheatColours()
+    {
+        foreach (var def in CheatDef.All.Where(d => d.HasState)) PaintCheat(def, false);
+    }
+
+    private async void OnResyncCheatsClick(object sender, RoutedEventArgs e) => await ResyncCheatsAsync();
+
+    /// <summary>
+    /// Re-reads the states the game will actually report and resets the rest to off.
+    /// Only the plugin-backed entries can be read; console toggles are write-only, so
+    /// this is a "start from a known baseline" button rather than a true refresh.
+    /// </summary>
+    private async Task ResyncCheatsAsync()
+    {
+        foreach (var def in CheatDef.All.Where(d => d.HasState && d.Kind != CheatKind.Plugin))
+            PaintCheat(def, false);
+
+        var read = 0;
+        foreach (var def in CheatDef.All.Where(d => d.Kind == CheatKind.Plugin))
+        {
+            var r = await _client.SendAsync(def.Command);   // no 'enabled' arg = report only
+            if (!r.Ok) { PaintCheat(def, false); continue; }
+
+            var real = r.Result?["infiniteItems"]?.GetValue<bool>()
+                       ?? r.Result?["instantBuild"]?.GetValue<bool>() ?? false;
+            PaintCheat(def, real);
+            read++;
+        }
+        Status($"Re-synced. {read} state(s) read from the game; the rest reset to off.");
+    }
+
+    private async void OnAllCheatsOffClick(object sender, RoutedEventArgs e)
+    {
+        // Flip entries are skipped: sending the bare command again would turn something
+        // ON if the app's parity is wrong, which is the opposite of what this promises.
+        var on = CheatDef.All.Where(d => d.Kind is CheatKind.OnOff or CheatKind.Plugin
+                                         && _cheatOn.GetValueOrDefault(d.Command)).ToList();
+        if (on.Count == 0) { Status("Nothing is showing as on."); return; }
+
+        var turnedOff = 0;
+        foreach (var def in on)
+        {
+            var (ok, _) = await SetCheatAsync(def, false);
+            if (ok) { PaintCheat(def, false); turnedOff++; }
+        }
+
+        var flips = CheatDef.All.Count(d => d.Kind == CheatKind.Flip && _cheatOn.GetValueOrDefault(d.Command));
+        Status(flips > 0
+            ? $"Turned off {turnedOff} of {on.Count}. {flips} toggle-style command(s) skipped — click those individually."
+            : $"Turned off {turnedOff} of {on.Count}.");
     }
 
     private async void OnConsoleUnlockClick(object sender, RoutedEventArgs e)

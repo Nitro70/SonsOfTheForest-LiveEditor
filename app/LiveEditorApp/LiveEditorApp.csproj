@@ -12,17 +12,20 @@
     <ApplicationTitle>SOTF Live Editor</ApplicationTitle>
   </PropertyGroup>
 
-  <!-- Release builds ship self-contained so the installer never has to detect or
-       install a .NET runtime. WPF cannot be trimmed, so this is a large single file
-       (~70 MB compressed) — worth it for a genuinely prompt-free install. -->
+  <!-- Release ships self-contained so the installer never has to detect or install a
+       .NET runtime. WPF cannot be trimmed, so it is one large file (~60 MB) — worth it
+       for a genuinely prompt-free install.
+
+       RuntimeIdentifier/SelfContained are deliberately NOT set here: on .NET 6 they
+       apply to `dotnet build` as well, which silently moves the build output into a
+       win-x64/ subfolder and leaves a stale exe at the old path. They are passed on
+       the publish command instead (see the build script and README).
+  -->
   <PropertyGroup Label="Publish">
-    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
-    <SelfContained>true</SelfContained>
     <PublishSingleFile>true</PublishSingleFile>
     <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
     <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
     <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
-    <DebugType>none</DebugType>
   </PropertyGroup>
 
 </Project>

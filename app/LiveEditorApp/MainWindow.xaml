@@ -250,35 +250,29 @@
                             <Button Content="Restore" Click="OnSpawnRestoreClick"/>
                         </StackPanel>
 
-                        <TextBlock Text="Restored commands" FontWeight="SemiBold" Margin="0,0,0,4"/>
-                        <TextBlock Text="buildhack was removed from the game, but its machinery survives on StructureCraftingSystem."
-                                   Foreground="{StaticResource Muted}" TextWrapping="Wrap" Margin="0,0,0,6"/>
-                        <StackPanel Orientation="Horizontal" Margin="0,0,0,14">
-                            <Button Content="buildhack ON" Click="OnBuildhackOnClick"/>
-                            <Button Content="buildhack OFF" Click="OnBuildhackOffClick"/>
-                            <Button Content="instantbuild ON" Click="OnInstantBuildOnClick"/>
-                            <Button Content="instantbuild OFF" Click="OnInstantBuildOffClick"/>
-                        </StackPanel>
-
                         <TextBlock Text="Console" FontWeight="SemiBold" Margin="0,0,0,4"/>
                         <StackPanel Orientation="Horizontal" Margin="0,0,0,14">
                             <Button Content="Unlock console / cheats" Click="OnConsoleUnlockClick"/>
                             <Button Content="Introspect (hidden check)" Click="OnIntrospectClick"/>
                         </StackPanel>
 
-                        <TextBlock Text="Quick cheats" FontWeight="SemiBold" Margin="0,0,0,4"/>
-                        <WrapPanel Margin="0,0,0,14">
-                            <Button Content="godmode on" Click="OnQuickCheat" Tag="godmode on"/>
-                            <Button Content="godmode off" Click="OnQuickCheat" Tag="godmode off"/>
-                            <Button Content="invisible on" Click="OnQuickCheat" Tag="invisible on"/>
-                            <Button Content="invisible off" Click="OnQuickCheat" Tag="invisible off"/>
-                            <Button Content="buffstats" Click="OnQuickCheat" Tag="buffstats"/>
-                            <Button Content="energyhack on" Click="OnQuickCheat" Tag="energyhack on"/>
-                            <Button Content="speedyrun on" Click="OnQuickCheat" Tag="speedyrun on"/>
-                            <Button Content="superjump on" Click="OnQuickCheat" Tag="superjump on"/>
-                            <Button Content="clearpickups" Click="OnQuickCheat" Tag="clearpickups"/>
-                            <Button Content="removeallitems" Click="OnQuickCheat" Tag="removeallitems"/>
-                        </WrapPanel>
+                        <TextBlock Text="Cheats" FontWeight="SemiBold" Margin="0,0,0,4"/>
+                        <TextBlock TextWrapping="Wrap" Foreground="{StaticResource Muted}" Margin="0,0,0,6"
+                                   Text="Click once to turn on, click again to turn off. Green is on, red is off. The app tracks what it has sent — if you also toggle something from the in-game console, the colour here can drift out of step; Re-sync re-reads the states that can actually be read back."/>
+                        <WrapPanel x:Name="CheatCorePanel" Margin="0,0,0,10"/>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,4">
+                            <Button x:Name="ShowMoreButton" Content="Show more commands  ▾" Click="OnShowMoreCheatsClick"/>
+                            <Button Content="Re-sync" Click="OnResyncCheatsClick"
+                                    ToolTip="Re-read the states the game will report, and assume the rest are off."/>
+                            <Button Content="All off" Click="OnAllCheatsOffClick"
+                                    ToolTip="Send the off form of every toggle that is currently showing as on."/>
+                        </StackPanel>
+
+                        <StackPanel x:Name="CheatMoreSection" Visibility="Collapsed" Margin="0,6,0,0">
+                            <TextBlock TextWrapping="Wrap" Foreground="{StaticResource Muted}" Margin="0,0,0,8"
+                                       Text="Beyond the common ones. Most of these follow the game's usual '&lt;command&gt; on|off' form, but only some were verified by running them — if one does nothing, that is the game, not the button. Buttons with no colour are one-shot actions, not toggles."/>
+                        </StackPanel>
                     </StackPanel>
                 </ScrollViewer>
             </TabItem>

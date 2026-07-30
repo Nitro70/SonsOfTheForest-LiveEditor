@@ -17,6 +17,52 @@
         <SolidColorBrush x:Key="Select"   Color="#3D5A80"/>
         <SolidColorBrush x:Key="Hover"    Color="#34373D"/>
 
+        <!-- Cheat toggle states. Deliberately desaturated: a saturated red on every
+             inactive button would read as "error" rather than "off". -->
+        <SolidColorBrush x:Key="OnFill"     Color="#2C4A32"/>
+        <SolidColorBrush x:Key="OnEdge"     Color="#7BB661"/>
+        <SolidColorBrush x:Key="OnText"     Color="#DCF0D2"/>
+        <SolidColorBrush x:Key="OffFill"    Color="#3E2B29"/>
+        <SolidColorBrush x:Key="OffEdge"    Color="#8C4E44"/>
+        <SolidColorBrush x:Key="OffText"    Color="#E4C7C1"/>
+
+        <!-- Toggle/action buttons in Tools & Cheats. The default Button template
+             overwrites Background on hover with a fixed grey, which would wipe the
+             on/off tint; this one keeps the tint and lightens it with an overlay. -->
+        <Style x:Key="CheatButton" TargetType="Button">
+            <Setter Property="Foreground" Value="{StaticResource Fg}"/>
+            <Setter Property="Background" Value="#3A3D42"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Line}"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Margin" Value="0,2,6,2"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Border Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="1" CornerRadius="3"/>
+                            <Border x:Name="glow" Background="White" Opacity="0" CornerRadius="3"/>
+                            <ContentPresenter Margin="{TemplateBinding Padding}"
+                                              HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="glow" Property="Opacity" Value="0.10"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="glow" Property="Opacity" Value="0.20"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Opacity" Value="0.45"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
         <!-- CheckBox: the stock template paints a white box with system colours, which
              on this dark theme makes "checked" and "indeterminate" nearly identical.
              An explicit template makes on/off unmistakable at a glance. -->
