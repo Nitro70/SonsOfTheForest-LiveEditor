@@ -1,0 +1,22 @@
+# Build output
+bin/
+obj/
+dist/
+*.user
+
+# Decompiler output.
+#
+# tools/decompile/out/ holds a full IL2CPP dump of Sons Of The Forest — dump.cs,
+# il2cpp.h, script.json and ~210 reconstructed assemblies under DummyDll/. That is
+# Endnight's copyrighted game code, so it is never committed. Regenerate it locally
+# against your own copy of the game if you need it (see docs in tools/).
+#
+# The Il2CppDumper binaries are likewise third-party and not redistributed here.
+tools/decompile/out/
+tools/decompile/Il2CppDumper/
+tools/decompile/*.zip
+
+# Local machine state
+gamedir.txt
+.claude/
+*.log

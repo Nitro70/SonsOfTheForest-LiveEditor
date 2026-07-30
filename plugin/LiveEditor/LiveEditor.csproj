@@ -1,0 +1,169 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>LiveEditor</AssemblyName>
+    <RootNamespace>LiveEditor</RootNamespace>
+    <EnableDefaultItems>true</EnableDefaultItems>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+
+  <!--
+    Locate the game. Every Reference below points into the install, so this has to
+    resolve on any machine, not just the one that wrote it.
+
+    Precedence: an explicit -p:GameDir=..., then the SOTF_GAME_DIR environment
+    variable, then Steam's own registry entry, then the usual install roots. Set
+    either of the first two if the game lives somewhere unusual:
+
+        dotnet build -p:GameDir="D:\Games\Sons Of The Forest"
+  -->
+  <PropertyGroup Label="Game location">
+    <GameDir Condition="'$(GameDir)' == ''">$(SOTF_GAME_DIR)</GameDir>
+
+    <_SteamRoot Condition="'$(GameDir)' == ''">$([MSBuild]::GetRegistryValueFromView('HKEY_CURRENT_USER\Software\Valve\Steam', 'SteamPath', null, RegistryView.Registry64, RegistryView.Registry32))</_SteamRoot>
+    <GameDir Condition="'$(GameDir)' == '' And '$(_SteamRoot)' != '' And Exists('$(_SteamRoot)\steamapps\common\Sons Of The Forest')">$(_SteamRoot)\steamapps\common\Sons Of The Forest</GameDir>
+  </PropertyGroup>
+
+  <!-- Last resort: probe the default Steam root and a SteamLibrary folder on each
+       drive letter. Written out flat because MSBuild has no filesystem search and no
+       loop construct usable at property-evaluation time. -->
+  <PropertyGroup Label="Game location fallback" Condition="'$(GameDir)' == ''">
+    <_Probe>C:\Program Files (x86)\Steam\steamapps\common\Sons Of The Forest</_Probe>
+    <GameDir Condition="Exists('$(_Probe)')">$(_Probe)</GameDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(GameDir)' == ''">
+    <_Probe>C:\SteamLibrary\steamapps\common\Sons Of The Forest</_Probe>
+    <GameDir Condition="Exists('$(_Probe)')">$(_Probe)</GameDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(GameDir)' == ''">
+    <_Probe>D:\SteamLibrary\steamapps\common\Sons Of The Forest</_Probe>
+    <GameDir Condition="Exists('$(_Probe)')">$(_Probe)</GameDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(GameDir)' == ''">
+    <_Probe>E:\SteamLibrary\steamapps\common\Sons Of The Forest</_Probe>
+    <GameDir Condition="Exists('$(_Probe)')">$(_Probe)</GameDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(GameDir)' == ''">
+    <_Probe>F:\SteamLibrary\steamapps\common\Sons Of The Forest</_Probe>
+    <GameDir Condition="Exists('$(_Probe)')">$(_Probe)</GameDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(GameDir)' == ''">
+    <_Probe>G:\SteamLibrary\steamapps\common\Sons Of The Forest</_Probe>
+    <GameDir Condition="Exists('$(_Probe)')">$(_Probe)</GameDir>
+  </PropertyGroup>
+
+  <Target Name="CheckGameDir" BeforeTargets="ResolveAssemblyReferences">
+    <Error Condition="!Exists('$(GameDir)\_Redloader\net6\RedLoader.dll')"
+           Text="Could not find a RedLoader install. Looked for '$(GameDir)\_Redloader\net6\RedLoader.dll'. Install RedLoader into Sons Of The Forest first, then build with -p:GameDir=&quot;&lt;game folder&gt;&quot; or set the SOTF_GAME_DIR environment variable." />
+  </Target>
+
+  <ItemGroup Label="RedLoader / SonsSdk (loader-provided at runtime)">
+    <Reference Include="RedLoader">
+      <HintPath>$(GameDir)\_Redloader\net6\RedLoader.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="SonsSdk">
+      <HintPath>$(GameDir)\_Redloader\net6\SonsSdk.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Il2CppInterop.Runtime">
+      <HintPath>$(GameDir)\_Redloader\net6\Il2CppInterop.Runtime.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Il2CppInterop.Common">
+      <HintPath>$(GameDir)\_Redloader\net6\Il2CppInterop.Common.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <!-- Harmony: used to intercept the console's log helpers so command output can
+         be captured and returned to the external app. -->
+    <Reference Include="0Harmony">
+      <HintPath>$(GameDir)\_Redloader\net6\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup Label="Generated game interop (loader-provided at runtime)">
+    <Reference Include="Sons">
+      <HintPath>$(GameDir)\_Redloader\Game\Sons.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Sons.Item">
+      <HintPath>$(GameDir)\_Redloader\Game\Sons.Item.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Sons.Save">
+      <HintPath>$(GameDir)\_Redloader\Game\Sons.Save.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <!-- Endnight.Types.SingletonBehaviour<T>: base of StructureCraftingSystem,
+         SaveGameManager and most other game singletons. -->
+    <Reference Include="Endnight">
+      <HintPath>$(GameDir)\_Redloader\Game\Endnight.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <!-- Sons.Gui: LoadMenu (unattended save loading).
+         Sons.Gameplay.GameSetup: Sons.Save.GameStateData, its payload type. -->
+    <Reference Include="Sons.Gui">
+      <HintPath>$(GameDir)\_Redloader\Game\Sons.Gui.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Sons.Gameplay.GameSetup">
+      <HintPath>$(GameDir)\_Redloader\Game\Sons.Gameplay.GameSetup.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <!-- Sons.StatSystem: Stat/HealthStat/StaminaStat etc. behind LocalPlayer.Vitals. -->
+    <Reference Include="Sons.StatSystem">
+      <HintPath>$(GameDir)\_Redloader\Game\Sons.StatSystem.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <!-- IMGUIModule: GUIContent, which is what the console's LogContent wraps. -->
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>$(GameDir)\_Redloader\Game\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Il2Cppmscorlib">
+      <HintPath>$(GameDir)\_Redloader\Game\Il2Cppmscorlib.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Il2CppSystem">
+      <HintPath>$(GameDir)\_Redloader\Game\Il2CppSystem.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(GameDir)\_Redloader\Game\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>$(GameDir)\_Redloader\Game\UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="bolt">
+      <HintPath>$(GameDir)\_Redloader\Game\bolt.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <!-- Copy the built assembly + manifest straight into the game's Mods folder so
+       a normal build is immediately loadable without a manual copy step.
+       ContinueOnError: the game locks LiveEditor.dll while it is running, and a
+       locked file should not fail the build - the compiled output is still valid,
+       it just needs a game restart to take effect. -->
+  <Target Name="DeployToMods" AfterTargets="Build">
+    <MakeDir Directories="$(GameDir)\Mods\LiveEditor" />
+    <Copy SourceFiles="$(TargetDir)LiveEditor.dll" DestinationFolder="$(GameDir)\Mods"
+          ContinueOnError="WarnAndContinue" Retries="1" RetryDelayMilliseconds="200">
+      <Output TaskParameter="CopiedFiles" ItemName="DeployedDll" />
+    </Copy>
+    <Copy SourceFiles="manifest.json" DestinationFolder="$(GameDir)\Mods\LiveEditor"
+          ContinueOnError="WarnAndContinue" />
+    <Message Importance="high" Text="DEPLOYED to Mods folder."
+             Condition="'@(DeployedDll)' != ''" />
+    <Message Importance="high" Text="NOT DEPLOYED - game is running and holds LiveEditor.dll. Restart the game to apply."
+             Condition="'@(DeployedDll)' == ''" />
+  </Target>
+
+</Project>

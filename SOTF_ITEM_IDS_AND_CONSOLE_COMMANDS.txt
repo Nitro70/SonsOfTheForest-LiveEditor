@@ -1,0 +1,2140 @@
+SONS OF THE FOREST - ITEM IDs & CONSOLE COMMANDS
+====================================================================================================
+Generated   : 2026-07-29
+Game build  : Steam buildid 20228174  -  Unity 2022.2.16f1, IL2CPP
+Totals      : 418 working commands, 308 items
+
+WHERE THIS DATA COMES FROM
+  Commands exist  : read from the live console's own command registry in a running game.
+  Command args    : cross-checked against TWO independent decompiles of the game
+                    (Il2CppInterop proxies and an Il2CppDumper dump). 0 disagreements.
+  Items           : read from the live ItemDatabaseManager. Item definitions live in
+                    Unity assets rather than code, so the running game is the only
+                    authoritative source - no decompile can give you this.
+
+ABOUT THE DESCRIPTIONS - READ THIS
+  Only commands that were actually executed and observed, or whose real source code
+  was read, carry a description. Everything else deliberately has NO description.
+  Widely-circulated community lists describe roughly 100 commands that nobody appears
+  to have verified (or pad them with filler like 'argument meaning not documented
+  publicly'). Those guesses are omitted here rather than repeated. A blank means
+  'not verified', not 'does nothing'.
+
+====================================================================================================
+
+
+####################################################################################################
+#  PART 1 - ITEM IDs
+####################################################################################################
+
+IMPORTANT - 'SPAWNABLE' MEANS TWO DIFFERENT THINGS
+
+  Every one of the 308 items below has a world pickup prefab, so ALL of them can be
+  placed in the world by mod tooling that calls UnityEngine Instantiate directly.
+  VERIFIED: all 308 were spawned this way in a single sweep, 0 failures.
+
+  The  spawnitem  console command is stricter - it obeys each item's internal
+  canBeSpawned flag, and 60 items have that flag set to false. That is the only
+  difference between the two lists below.
+
+  Worked example: the 8 artifact items (707, 662, 667, 668, 669, 689, 708, 712) all
+  have canBeSpawned=false, so  spawnitem  refuses them - yet all 8 were spawned
+  successfully by mod tooling and confirmed on screen by their lightning effect.
+
+  Vehicles are a separate system again: the golf cart is NOT an item and does not
+  appear anywhere in this list. Use  addprefab golfcart.
+
+====================================================================================================
+GROUP A - WORKS WITH spawnitem (248)
+====================================================================================================
+Also placeable by mod tooling.
+
+  ID     NAME                                 INTERNAL NAME                  MAX   FLAGS
+  ------------------------------------------------------------------------------------------------
+  78     Log                                  Log_Legacy                     2     legacy
+  340    Guitar                               Guitar                         1     unique
+  341    Binoculars                           Binoculars                     1     unique
+  346    Shotgun Rail                         ShotgunRail                    1     unique
+  351    Grab Bag                             GrabBag                        1     unique
+  353    Stun Gun                             StunGun                        1     unique
+  354    Night Vision Goggles                 NightVisionGoggles             1     unique
+  355    Pistol                               CompactPistol                  1     unique
+  356    Modern Axe                           ModernAxe                      1     unique
+  358    Shotgun                              ShotgunPumpAction              1     unique
+  359    Machete                              Machete2                       1     unique
+  360    Compound Bow                         TacticalBow                    1     unique
+  361    Rifle                                Rifle                          1     unique
+  362    9mm Ammo                             9mmAmmo                        1000  
+  363    Slug Ammo                            SlugAmmo                       1000  
+  364    Buckshot Ammo                        BuckshotAmmo                   1000  
+  365    Crossbow                             Crossbow                       1     unique
+  367    Katana                               Katana                         1     unique
+  368    Crossbow Bolt                        CrossbowAmmoBolt               20    
+  369    Stun Gun Ammo                        StunGunAmmo                    1000  
+  370    9mm Ammo                             PistolAmmoBox                  1     
+  371    Buckshot Ammo                        ShotgunAmmoBoxBuckshot         1     
+  372    Slug Ammo                            ShotgunAmmoBoxSlug             1     
+  373    Carbon Fiber Arrow                   TacticalBowAmmo                20    unique
+  374    Silencer                             PistolSuppressor               1     unique
+  375    Laser Sight                          LaserSightMod                  1     unique
+  376    Pistol Rail                          CompactPistolRail              1     unique
+  378    Flashlight Attachment                FlashlightMod                  1     unique
+  379    Tactical Axe                         TacticalAxe                    1     unique
+  381    Grenade                              Grenade                        5     
+  382    Grenade                              GrenadeAmmo                    10    
+  383    Rifle Rail                           RifleRailMod                   1     unique
+  386    Revolver                             Revolver                       1     unique
+  387    Rifle Ammo                           RifleAmmo                      1000  
+  388    Molotov                              Molotov                        6     
+  389    Molotov                              MolotovAmmo                    10    
+  390    Printer Resin                        3dPrinterResin                 1000  
+  391    Red Mask                             RedMask                        1     unique
+  392    Stick                                Stick                          20    
+  393    Rock                                 Rock                           10    
+  394    Chainsaw                             TacticalChainsaw               1     unique
+  395    Plank                                LogPlank                       4     
+  396    Stun Baton                           TaserStick                     1     unique
+  397    Shiitake                             ShiitakeMushroom               20    
+  398    King Oyster                          KingOysterMushroom             20    
+  399    Hydnum Repandum                      HydnumRepandumMushroom         20    
+  400    Fly Amanita                          FlyAmanitaMushroom             20    
+  401    Turtle Egg                           TurtleEgg                      4     
+  402    Backpack                             Backpack                       1     unique
+  403    Rope                                 Rope                           10    
+  405    Bone                                 Bone                           16    
+  406    Quarter Log                          QuarterLog                     2     
+  408    Half Log                             HalfLog                        2     
+  409    Three Quarter Log                    ThreeQuarterLog                2     
+  410    Watch                                Wristwatch                     10    
+  412    GPS Tracker                          GPSTracker                     1     unique
+  413    Lighter                              PlasmaLighter                  1     unique
+  414    Vodka Bottle                         VodkaBottle                    6     
+  415    Cloth                                Cloth                          1000  
+  416    Circuit Board                        CircuitBoard                   6     
+  417    Sticky Bomb                          TimeBomb                       3     
+  418    Wire                                 Wire                           100   
+  419    Duct Tape                            DuctTape                       100   
+  420    C4 Brick                             C4Brick                        3     
+  421    Ramen Noodles                        RamenNoodles                   4     
+  422    Repair Tool                          RepairTool                     1     unique
+  423    Corporate Line                       NovelA                         1     unique
+  424    Puffton - On Creating an Empire      NovelB                         1     unique
+  425    Crunchie Wunchies                    CerealBox                      4     
+  426    Printed Flask                        3dPrintedFlask                 1     unique
+  428    Printed Sled                         3dPrintedSled                  1     unique
+  430    Skull                                Skull                          3     
+  431    Firefighter Axe                      FireAxe                        1     unique
+  432    Can Opener                           CanOpener                      1     unique
+  433    Meat                                 Meat                           7     unique
+  434    Canned Food                          CannedFood                     6     
+  435    Gold Mask                            GoldMask                       1     unique
+  436    Fish                                 Fish                           3     unique
+  437    Meds                                 Pills                          6     
+  438    MRE Pack                             MrePack                        6     
+  439    Energy Drink                         EnergyDrink                    10    
+  440    Flare                                Flare                          10    
+  441    Energy Bar                           EnergyBar                      10    
+  443    Crafted Bow                          CraftedBow                     1     unique
+  444    Rebreather                           Rebreather                     1     unique
+  445    Blueberries                          Blueberries                    20    
+  446    Twinberries                          Twinberries                    20    
+  447    Salmonberries                        Salmonberries                  20    
+  448    Snowberries                          Snowberries                    20    
+  449    Devil's Club                         DevilsClub                     20    
+  450    Horsetail                            Horsetail                      20    
+  451    Aloe Vera                            AloeVera                       20    
+  452    Yarrow                               Yarro                          20    
+  453    Fireweed                             Fireweed                       20    
+  454    Arrowleaf                            ArrowleafBalsamroot            20    
+  455    Health Mix                           HealthMix                      3     
+  456    Health Mix +                         HealthMixPlus                  3     
+  457    Stun Gun Ammo                        StunGunAmmoBox                 1     
+  459    Slingshot                            Slingshot                      1     unique
+  461    Energy Mix                           EnergyMix                      3     
+  462    Energy Mix +                         EnergyMixPlus                  3     
+  464    Cat Food                             CatFood                        1     unique
+  465    Chicory                              Chicory                        20    
+  466    Oyster                               Oyster                         5     unique
+  467    Album Cover                          AlbumCover                     1     unique
+  468    Cross                                Cross                          1     unique
+  469    Air Tank                             AirCanister                    4     unique
+  471    Flashlight                           Flashlight                     1     unique
+  472    Animal Hide                          DeerHide                       5     
+  473    Leaf Armor                           LeafArmour                     10    
+  474    Crafted Spear                        CraftedSpear                   5     unique
+  476    Small Rock                           SmallRock                      30    
+  477    Crafted Club                         CraftedClub                    1     unique
+  479    Feather                              Feather                        1000  
+  480    Arm                                  SeveredArm                     2     unique
+  481    Leg                                  SeveredLeg                     2     unique
+  482    Head                                 SeveredHead                    1     unique
+  483    Emergency Pack                       EmergencyPack                  1     unique
+  484    Leaves                               Leaf                           1000  
+  485    Shovel                               Shovel                         1     unique
+  486    Walkie Talkie                        WalkieTalkie                   1     unique
+  487    Pajamas                              SilkPyjamas                    1     unique
+  489    Tactical Pants                       TacticalPants                  1     unique
+  490    Hoodie                               Hoodie                         1     unique
+  491    Blazer                               OldJacket                      1     unique
+  492    Tuxedo                               Tuxedo                         1     unique
+  493    Leather Jacket                       LeatherJacket                  1     unique
+  494    Bone Armor                           BoneArmour                     10    
+  495    Tactical Jacket                      TacticalJacket                 2     
+  496    Cash                                 Money                          1000000 
+  499    Wetsuit                              Wetsuit                        1     unique
+  500    Winter Jacket                        PuffyJacket                    1     unique
+  502    Coins                                Coins                          1000  
+  503    Torch                                Torch                          1     unique
+  504    Tarp                                 Tarp                           5     
+  506    Turtle Shell                         TurtleShell                    3     unique
+  507    Stone Arrow                          CraftedArrow                   20    unique
+  508    Skin Pouch                           LootPouch                      6     unique
+  509    Holosprings Pamphlet                 BunkerPamphlet                 1     unique
+  517    Cooking Pot                          CookingPot                     1     unique
+  518    Paper Target                         PaperTarget                    50    
+  519    Hide Armor                           DeerHideArmour                 10    
+  520    Structure Element                    Structure Element              -1    unique
+  521    Note                                 EmailPrintoutCaveLighting      1     
+  522    Rope Gun                             RopeGun                        1     unique
+  523    Zipline Rope                         ZiplineRope                    4     
+  524    Golf Ball                            GolfBall                       8     
+  525    Putter                               GolfPutter                     1     unique
+  526    Note                                 EmailPrintoutMrPuffyWill       1     
+  527    Batteries                            Batteries                      6     
+  528    Note                                 EmailPrintoutMrPuffyFinancial  1     
+  529    GPS Locator                          GPSLocator                     10    unique
+  534    Note                                 EmailPrintoutGolfA             1     
+  535    Note                                 EmailPrintoutGolfB             1     
+  536    Note                                 EmailPrintoutGolfC             1     
+  537    Note                                 EmailPrintoutGolfD             1     
+  538    Note                                 EmailPrintoutPaintingA         1     
+  539    Note                                 EmailPrintoutAstrologyA        1     
+  540    Note                                 EmailPrintoutAstrologyB        1     
+  541    Note                                 EmailPrintoutAstrologyC        1     
+  542    Note                                 EmailPrintoutPoliticianA       1     
+  543    Note                                 EmailPrintoutPoliticianB       1     
+  544    Note                                 EmailPrintoutPoliticianC       1     
+  545    Note                                 EmailPrintoutBalletA           1     
+  546    Note                                 EmailPrintoutSqueakyShoesA     1     
+  547    Note                                 EmailPrintoutSqueakyShoesB     1     
+  548    Note                                 EmailPrintoutSqueakyShoesC     1     
+  552    Blueprint                            BlueprintBook                  1     unique
+  553    Tech Mesh                            TechMesh                       10    
+  554    Tech Armor                           TechArmour                     10    
+  555    Track Suit                           VirginiaTrackSuit              1     unique
+  556    Dress                                VirginiaDress                  1     unique
+  557    Leather Suit                         VirginiaLeatherSuit            1     unique
+  558    Camouflage Suit                      VirginiaCamoSuit               1     unique
+  560    Printed Grappling Hook               3dPrintedGrapplingHook         2     
+  562    Holoville Notice                     HolovilleNoticeA               1     unique
+  563    Holoville Notice                     HolovilleNoticeB               1     unique
+  564    Holoville Notice                     HolovilleNoticeC               1     unique
+  565    Holoville Notice                     HolovilleNoticeD               1     unique
+  566    Maintenance Keycard                  KeyCardMaintenance             1     
+  567    Guest Keycard                        KeyCardGuest                   1     
+  568    VIP Keycard                          KeyCardVIP                     1     
+  569    Brain Bite                           FoodCubeBrain                  1     
+  570    Steak Bite                           FoodCubeSteak                  1     
+  571    Bacon Bite                           FoodCubeSteakAndBacon          1     
+  572    Ancient Armor                        GoldenArmour                   1     unique
+  574    Rescued                              NovelC                         1     unique
+  575    Parallel Universes                   NovelD                         1     unique
+  576    Quarter Plank                        QuarterLogPlank                4     
+  577    Half Plank                           HalfLogPlank                   4     
+  578    Three Quarter Plank                  ThreeQuarterLogPlank           4     
+  589    Guide Book                           TutorialBook                   1     unique
+  590    Radio                                Radio                          1     unique
+  592    Creepy Skin                          CreepySkin                     10    
+  593    Creepy Armor                         CreepyArmour                   10    
+  594    Guarana Berries                      GuaranaBerries                 20    
+  595    Blackberries                         Blackberries                   20    
+  596    AloeVera Seed                        AloeVeraSeed                   20    
+  597    Arrowleaf Seed                       ArrowleafSeed                  20    
+  598    Blackberry Seed                      BlackberrySeed                 20    
+  599    Blueberry Seed                       BlueberrySeed                  20    
+  600    DevilsClub Seed                      DevilsClubSeed                 20    
+  601    Fireweed Seed                        FireweedSeed                   20    
+  602    Guarana Seed                         GuaranaSeed                    20    
+  603    Horsetail Seed                       HorsetailSeed                  20    
+  604    Salmonberry Seed                     SalmonberrySeed                20    
+  605    Chicory Seed                         ChicorySeed                    20    
+  606    Yarrow Seed                          YarroSeed                      20    
+  611    Note                                 NumbersPrintout                1     
+  614    Note                                 EmailPrintoutGovernmentA       1     
+  615    Note                                 EmailPrintoutGovernmentB       1     
+  616    Note                                 EmailPrintoutGovernmentC       1     
+  617    Note                                 StockPricePrintout             1     
+  618    3d Printed Arrow                     3dPrintedArrow                 20    unique
+  619    Swim Suit                            VirginiaSwimSuit               1     unique
+  626    Foldable Glider                      HangGlider                     1     unique
+  630    Knight V                             KnightV                        1     unique
+  631    The Realm Beyond                     NovelF                         1     unique
+  633    Cult Pamphlet                        CultPamphlet                   1     unique
+  634    Solar Panel                          SolarPanel                     3     
+  635    Light Bulb                           LightBulb                      8     
+  639    Space Suit                           SpaceSuit                      1     unique
+  640    Stone                                Stone                          4     
+  642    Duck Head                            DuckHead                       1     
+  643    Eagle Head                           EagleHead                      1     
+  644    Small Turtle Head                    SmallTurtleHead                1     
+  646    Rabbit Head                          RabbitHead                     1     
+  647    Squirrel Head                        SquirrelHead                   1     
+  648    Seagull Head                         SeagullHead                    1     
+  650    Turtle Head                          TurtleHead                     1     
+  651    Deer Head                            DeerHead                       1     
+  652    Moose Head                           MooseHead                      1     
+  653    Note                                 PersonalNoteA                  1     
+  654    Note                                 PersonalNoteB                  1     
+  655    Note                                 PersonalNoteC                  1     
+  657    3D Printed GPS Case                  3dPrintedGpsLocatorCase        5     
+  661    Golf Cart Battery                    GolfCartBattery                3     
+  663    Pickaxe                              Pickaxe                        1     unique
+  664    Solafite Ore                         SolafiteOre                    20    
+  703    Priest Outfit                        PriestOutfit                   1     unique
+  705    Circus Pamphlet                      CircusPamphlet                 1     unique
+  715    Raccoon Head                         RaccoonHead                    1     
+  724    Twinberry Seed                       TwinberrySeed                  20    
+  725    Snowberry Seed                       SnowberrySeed                  20    
+  727    Solafite Armor                       SolafiteArmour                 10    
+  728    Rabbit​                              AliveRabbit                    1     unique,no-store
+  729    Skunk Head​                          SkunkHead                      1     
+  749    Stewardess Dress​                    FlightAttendantUniform         1     unique
+
+====================================================================================================
+GROUP B - BLOCKED FOR spawnitem, BUT MOD TOOLING CAN STILL PLACE THEM (60)
+====================================================================================================
+canBeSpawned=false, so the  spawnitem  console command refuses these. They are NOT
+unspawnable in general: all 60 were placed successfully by mod tooling (VERIFIED).
+Mostly story notes, blueprints and artifact pieces. additem may also work on some.
+
+  ID     NAME                                 INTERNAL NAME                  MAX   FLAGS
+  ------------------------------------------------------------------------------------------------
+  380    Utility Knife                        CombatKnife                    1     unique
+  501    Boots                                TacticalBoots                  1     unique
+  612    Note                                 NewspaperCutout                1     
+  613    Note                                 NewspaperCutoutOutbid          1     
+  627    MrPuffton Table Card                 MrPufftonTableCard             1     unique
+  628    Mrs Puffton Table Card               MrsPufftonTableCard            1     unique
+  637    Action Camera                        ActionCamera                   1     unique
+  662    Artifact Piece A                     ArtifactPieceA                 1     unique
+  665    Blueprint                            BlueprintItemPlating           1     
+  666    Blueprint                            BlueprintPoweredCross          1     
+  667    Artifact Piece B                     ArtifactPieceB                 1     unique
+  668    Artifact Piece C                     ArtifactPieceC                 1     unique
+  669    Artifact Piece D                     ArtifactPieceD                 1     unique
+  670    Blueprint                            BlueprintGoreChair             1     
+  671    Blueprint                            BlueprintGoreCouch             1     
+  672    Blueprint                            BlueprintUberTrap              1     
+  674    Note                                 OldNoteA                       1     
+  675    Note                                 OldNoteB                       1     
+  676    Note                                 OldNoteC                       1     
+  677    Note                                 FishingEmailA                  1     
+  678    Note                                 FishingEmailB                  1     
+  679    Blueprint                            BlueprintGrindTrap             1     
+  680    Blueprint                            BlueprintSpotlight             1     
+  681    Blueprint                            BlueprintClock                 1     
+  682    Blueprint                            BlueprintSpinTrap              1     
+  684    Note                                 OldNoteE                       1     
+  685    Note                                 OldNoteD                       1     
+  686    Note                                 CultSignF                      1     
+  687    Note                                 PufftonEmailA                  1     
+  688    Blueprint                            BlueprintSpearThrowerTrap      1     
+  689    Artifact Piece E                     ArtifactPieceE                 1     unique
+  690    Notes                                StoryPages                     1     
+  691    Note                                 OldNoteF                       1     
+  692    Note                                 FishingEmailC                  1     
+  693    Note                                 BunkerMapA                     1     
+  694    Note                                 JianyuEmailPrintoutA           1     
+  695    Note                                 CultSignG                      1     
+  696    Note                                 CultSignH                      1     
+  697    Cult Sign                            CultSignI                      1     
+  698    Cult Sign                            CultSignJ                      1     
+  699    Cult Sign                            CultSignK                      1     
+  701    Blueprint                            BlueprintLegLamp               1     
+  706    Note                                 NewspaperDCutout               1     
+  707    Artifact                             Artifact                       1     unique
+  708    Artifact Piece F                     ArtifactPieceF                 1     unique
+  709    Blueprint                            BlueprintTeleporter            1     
+  710    Blueprint                            BlueprintRepelShrine           1     
+  711    Blueprint                            BlueprintAttractShrine         1     
+  712    Artifact Piece G                     ArtifactPieceG                 1     unique
+  713    Blueprint                            BlueprintPlaterCounter         1     
+  714    Blueprint                            BlueprintGoldArmorPlater       1     
+  716    Note                                 BiblePaperD                    1     
+  717    Note                                 OldNoteG                       1     
+  718    Note                                 PersonalNoteE                  1     
+  719    Note                                 PersonalNoteF                  1     
+  720    Note                                 PersonalNoteG                  1     
+  721    Note                                 BiblePaperScrapA               1     
+  722    Note                                 PufftonEmailB                  1     
+  723    Note                                 PufftonEmailC                  1     
+  726    Blueprint                            BlueprintHangGliderLauncher    1     
+
+
+####################################################################################################
+#  PART 2 - CONSOLE COMMANDS
+####################################################################################################
+
+OPENING THE CONSOLE
+  With RedLoader installed : cheats are enabled automatically. Press F1.
+  Vanilla game             : type  cheatstick  while in-world (nothing appears to
+                             happen), then press F1.
+  Multiplayer              : the host controls cheats via Options > Gameplay >
+                             Allow Cheats. Clients follow the host's setting.
+
+ARGUMENT COLUMN
+  string  - takes a value or a toggle, e.g.  godmode on
+  none    - takes no argument, just run it
+
+====================================================================================================
+WORKING COMMANDS (418) - alphabetical
+====================================================================================================
+
+addallitems
+    args  : string
+    usage : addallitems <value>
+
+addcharacter
+    args  : string  [arg type inferred]
+    usage : addcharacter <name> [count]
+    does  : Spawns creatures/NPCs. Registered dynamically, which is why older static command dumps miss it.
+
+additem
+    args  : string
+    usage : additem <id|name>
+    does  : Puts the item in your inventory. VERIFIED. Refused when a slot is occupied or the item cannot be carried right now.
+
+additemswithtag
+    args  : string
+    usage : additemswithtag <value>
+
+addmemory
+    args  : string
+    usage : addmemory <value>
+
+addprefab
+    args  : string  [arg type inferred]
+    usage : addprefab <name>  (e.g. addprefab golfcart)
+    does  : Spawns a PREFAB, not an item. This is the only way to get a golf cart - it is not in the item database, so spawnitem cannot produce one.
+
+aiangerlevel
+    args  : string
+    usage : aiangerlevel <value>
+
+aianimspeed
+    args  : string
+    usage : aianimspeed <value>
+
+aiarmorlevel
+    args  : string
+    usage : aiarmorlevel <value>
+
+aiarmortier
+    args  : string
+    usage : aiarmortier <value>
+
+aiattentiondebug
+    args  : string
+    usage : aiattentiondebug <value>
+
+aidisable
+    args  : string
+    usage : aidisable <value>
+
+aidummy
+    args  : string
+    usage : aidummy <value>
+
+aiforcestrafe
+    args  : string
+    usage : aiforcestrafe <value>
+
+aighostplayer
+    args  : string  [RedLoader-only]
+    usage : aighostplayer on|off
+    does  : AI ignores you. SOURCE-VERIFIED (SonsSdk) - note this is added by RedLoader, not vanilla.
+
+aigodmode
+    args  : string
+    usage : aigodmode <value>
+
+aijumpdebug
+    args  : string
+    usage : aijumpdebug <value>
+
+aiknockdowndisable
+    args  : string
+    usage : aiknockdowndisable <value>
+
+ailognavcuts
+    args  : string
+    usage : ailognavcuts <value>
+
+ailogspawntimes
+    args  : string
+    usage : ailogspawntimes <value>
+
+aimemoryadjust
+    args  : string
+    usage : aimemoryadjust <value>
+
+aipoolstats
+    args  : string
+    usage : aipoolstats <value>
+
+airadar
+    args  : string
+    usage : airadar <value>
+
+airunworldevent
+    args  : string
+    usage : airunworldevent <value>
+
+aishowanims
+    args  : string
+    usage : aishowanims <value>
+
+aishowanimtags
+    args  : string
+    usage : aishowanimtags <value>
+
+aishowaudio
+    args  : string
+    usage : aishowaudio <value>
+
+aishowdebug
+    args  : string
+    usage : aishowdebug <value>
+
+aishowdebugcamera
+    args  : string
+    usage : aishowdebugcamera <value>
+
+aishoweventmemory
+    args  : string
+    usage : aishoweventmemory <value>
+
+aishowhealth
+    args  : string
+    usage : aishowhealth <value>
+
+aishownavgraph
+    args  : string
+    usage : aishownavgraph <value>
+
+aishowpaths
+    args  : string
+    usage : aishowpaths <value>
+
+aishowplayerinfluences
+    args  : string
+    usage : aishowplayerinfluences <value>
+
+aishowstats
+    args  : string
+    usage : aishowstats <value>
+
+aishowsurvivalstats
+    args  : string
+    usage : aishowsurvivalstats <value>
+
+aishowthoughts
+    args  : string
+    usage : aishowthoughts <value>
+
+aistatadjust
+    args  : string
+    usage : aistatadjust <value>
+
+aistructurelog
+    args  : string
+    usage : aistructurelog <value>
+
+aitestsleep
+    args  : string
+    usage : aitestsleep <value>
+
+aithought
+    args  : string
+    usage : aithought <value>
+
+aithoughtnocooldown
+    args  : string
+    usage : aithoughtnocooldown <value>
+
+aivailstats
+    args  : string
+    usage : aivailstats <value>
+
+aiverboselog
+    args  : string
+    usage : aiverboselog <value>
+
+aivillageclosest
+    args  : string
+    usage : aivillageclosest <value>
+
+aivisiondebug
+    args  : string
+    usage : aivisiondebug <value>
+
+aiworldeventstats
+    args  : string
+    usage : aiworldeventstats <value>
+
+aiworldstats
+    args  : string
+    usage : aiworldstats <value>
+
+aizonestats
+    args  : string
+    usage : aizonestats <value>
+
+allowasync
+    args  : string
+    usage : allowasync <value>
+
+animallimitmult
+    args  : string
+    usage : animallimitmult <value>
+
+animalsenabled
+    args  : string
+    usage : animalsenabled <value>
+
+animstatesgui
+    args  : string  [arg type inferred]
+    usage : animstatesgui <value>
+
+anisoenabled
+    args  : string
+    usage : anisoenabled <value>
+
+anisominmax
+    args  : string
+    usage : anisominmax <value>
+
+areashadow
+    args  : string
+    usage : areashadow <value>
+
+astar
+    args  : string
+    usage : astar <value>
+
+audio2dtest
+    args  : string
+    usage : audio2dtest <value>
+
+audiodebug
+    args  : string
+    usage : audiodebug <value>
+
+audiodebugstates
+    args  : string  [arg type inferred]
+    usage : audiodebugstates <value>
+
+audiodescription
+    args  : string
+    usage : audiodescription <value>
+
+audioparameter
+    args  : string
+    usage : audioparameter <value>
+
+audioplayevent
+    args  : string
+    usage : audioplayevent <value>
+
+autodriveraft
+    args  : string
+    usage : autodriveraft <value>
+
+billboardenabled
+    args  : string
+    usage : billboardenabled <value>
+
+billboardignorechanges
+    args  : string
+    usage : billboardignorechanges <value>
+
+billboardlogalivechanges
+    args  : string
+    usage : billboardlogalivechanges <value>
+
+blockplayerfinaldeath
+    args  : string
+    usage : blockplayerfinaldeath <value>
+
+breakobjects
+    args  : string
+    usage : breakobjects <value>
+
+buffstats
+    args  : string  [arg type inferred]
+    usage : buffstats <value>
+
+buildermode
+    args  : string
+    usage : buildermode <value>
+
+burnbodyradius
+    args  : string
+    usage : burnbodyradius <value>
+
+cameradlss
+    args  : string
+    usage : cameradlss <value>
+
+camerafov
+    args  : string
+    usage : camerafov <value>
+
+cancelblueprints
+    args  : string  [RedLoader-only]
+    usage : cancelblueprints
+    does  : Cancels all placed blueprints. SOURCE-VERIFIED (SonsSdk).
+
+capsulemode
+    args  : string
+    usage : capsulemode <value>
+
+cavelight
+    args  : string
+    usage : cavelight <value>
+
+characterlods
+    args  : string
+    usage : characterlods <value>
+
+cheats
+    args  : string
+    usage : cheats <value>
+
+checkattachedentities
+    args  : string
+    usage : checkattachedentities <value>
+
+checkexitmenu
+    args  : string
+    usage : checkexitmenu <value>
+
+checkfrozenentities
+    args  : string
+    usage : checkfrozenentities <value>
+
+clear
+    args  : none
+    usage : clear
+
+clearallsettings
+    args  : none
+    usage : clearallsettings
+
+clearaudioparameters
+    args  : string
+    usage : clearaudioparameters <value>
+
+clearbushradius
+    args  : string
+    usage : clearbushradius <value>
+
+clearmidactionflag
+    args  : none
+    usage : clearmidactionflag
+
+clearpickups
+    args  : string  [RedLoader-only]
+    usage : clearpickups
+    does  : Removes dropped/spawned world pickups. SOURCE-VERIFIED (SonsSdk). Useful after bulk spawning.
+
+cloudenable
+    args  : string
+    usage : cloudenable <value>
+
+cloudfactor
+    args  : string
+    usage : cloudfactor <value>
+
+cloudshadowsenable
+    args  : string
+    usage : cloudshadowsenable <value>
+
+colorgrade
+    args  : string
+    usage : colorgrade <value>
+
+constructionrenderersoff
+    args  : string  [arg type inferred]
+    usage : constructionrenderersoff <value>
+
+constructionrendererson
+    args  : string  [arg type inferred]
+    usage : constructionrendererson <value>
+
+count
+    args  : string
+    usage : count <value>
+
+countgowithlayer
+    args  : string
+    usage : countgowithlayer <value>
+
+countlinkedstructures
+    args  : string  [arg type inferred]
+    usage : countlinkedstructures <value>
+
+counttag
+    args  : string
+    usage : counttag <value>
+
+createlight
+    args  : string
+    usage : createlight <value>
+
+creepyattackparty
+    args  : string
+    usage : creepyattackparty <value>
+
+creepyvillage
+    args  : string
+    usage : creepyvillage <value>
+
+crouchtoggle
+    args  : string
+    usage : crouchtoggle <value>
+
+dagdebug
+    args  : string
+    usage : dagdebug <value>
+
+dagtestmode
+    args  : string
+    usage : dagtestmode <value>
+
+dagtestnext
+    args  : string
+    usage : dagtestnext <value>
+
+dagtestprev
+    args  : string
+    usage : dagtestprev <value>
+
+damagedebug
+    args  : string
+    usage : damagedebug <value>
+
+damagefreeformstructure
+    args  : string  [arg type inferred]
+    usage : damagefreeformstructure <value>
+
+damageradius
+    args  : string
+    usage : damageradius <value>
+
+deathcount
+    args  : string
+    usage : deathcount <value>
+
+debugplayerhitlog
+    args  : string
+    usage : debugplayerhitlog <value>
+
+debugplayermelee
+    args  : string
+    usage : debugplayermelee <value>
+
+demomode
+    args  : string
+    usage : demomode <value>
+
+destroy
+    args  : string
+    usage : destroy <value>
+
+destroyfreeformstructure
+    args  : string  [arg type inferred]
+    usage : destroyfreeformstructure <value>
+
+destroyragdoll
+    args  : string
+    usage : destroyragdoll <value>
+
+destroywildcard
+    args  : string
+    usage : destroywildcard <value>
+
+diagrenderers
+    args  : string
+    usage : diagrenderers <value>
+
+diggingclear
+    args  : string
+    usage : diggingclear <value>
+
+disablecomponent
+    args  : string
+    usage : disablecomponent <value>
+
+disablegameobjecttester
+    args  : string
+    usage : disablegameobjecttester <value>
+
+disablego
+    args  : string
+    usage : disablego <value>
+
+disablegowildcard
+    args  : string
+    usage : disablegowildcard <value>
+
+disablescene
+    args  : string
+    usage : disablescene <value>
+
+disconnectplayer
+    args  : string
+    usage : disconnectplayer <value>
+
+disconnectplayers
+    args  : string
+    usage : disconnectplayers <value>
+
+dismemberradius
+    args  : string
+    usage : dismemberradius <value>
+
+doorclose
+    args  : string
+    usage : doorclose <value>
+
+dooropen
+    args  : string
+    usage : dooropen <value>
+
+dump
+    args  : string  [RedLoader-only]
+    usage : dump items|characters|prefabs
+    does  : Writes a .txt listing to disk. The items listing includes a Spawnable flag per entry. SOURCE-VERIFIED (SonsSdk).
+
+dumpboltserializers
+    args  : string  [RedLoader-only]
+    usage : dumpboltserializers
+    does  : Dumps network serializers. SOURCE-VERIFIED (SonsSdk).
+
+dumplobbyinfo
+    args  : none
+    usage : dumplobbyinfo
+
+dumpmeshinfo
+    args  : string
+    usage : dumpmeshinfo <value>
+
+dumptransforminfo
+    args  : string
+    usage : dumptransforminfo <value>
+
+duplicateobject
+    args  : string
+    usage : duplicateobject <value>
+
+dynamicrescameradebug
+    args  : string
+    usage : dynamicrescameradebug <value>
+
+dynamicresolutioncycletest
+    args  : string
+    usage : dynamicresolutioncycletest <value>
+
+dynamicresolutionoverride
+    args  : string
+    usage : dynamicresolutionoverride <value>
+
+dynamicresolutiontarget
+    args  : string
+    usage : dynamicresolutiontarget <value>
+
+enablecollisionbasedkillbox
+    args  : string
+    usage : enablecollisionbasedkillbox <value>
+
+enablecomponent
+    args  : string
+    usage : enablecomponent <value>
+
+enablego
+    args  : string
+    usage : enablego <value>
+
+enablescene
+    args  : string
+    usage : enablescene <value>
+
+enablestructureghosts
+    args  : string
+    usage : enablestructureghosts <value>
+
+energyhack
+    args  : string
+    usage : energyhack <value>
+
+equipitem
+    args  : string
+    usage : equipitem <id|name>
+    does  : Equips the item directly. VERIFIED working.
+
+exportlinkedstructurestojson
+    args  : string  [arg type inferred]
+    usage : exportlinkedstructurestojson <value>
+
+exposuresetspeed
+    args  : string
+    usage : exposuresetspeed <value>
+
+fakedrown
+    args  : string
+    usage : fakedrown <value>
+
+fakegpu
+    args  : string
+    usage : fakegpu <value>
+
+filteraudio
+    args  : string
+    usage : filteraudio <value>
+
+findobjectswithshader
+    args  : string
+    usage : findobjectswithshader <value>
+
+finishblueprints
+    args  : string  [RedLoader-only]
+    usage : finishblueprints
+    does  : Instantly completes all placed blueprints. SOURCE-VERIFIED (SonsSdk).
+
+firstlookforce
+    args  : string
+    usage : firstlookforce <value>
+
+flyovertrigger
+    args  : string  [arg type inferred]
+    usage : flyovertrigger <value>
+
+fogfakenotsupported
+    args  : string
+    usage : fogfakenotsupported <value>
+
+follow
+    args  : string
+    usage : follow <value>
+
+followstop
+    args  : string
+    usage : followstop <value>
+
+footstepdebug
+    args  : string
+    usage : footstepdebug <value>
+
+forcecloud
+    args  : string
+    usage : forcecloud <value>
+
+forcecloudprofile
+    args  : string
+    usage : forcecloudprofile <value>
+
+forceplayerexpression
+    args  : string
+    usage : forceplayerexpression <value>
+
+forcerain
+    args  : string
+    usage : forcerain <value>
+
+forceremovetrees
+    args  : string
+    usage : forceremovetrees <value>
+
+freecamera
+    args  : string
+    usage : freecamera <value>
+
+gainstrength
+    args  : string  [arg type inferred]
+    usage : gainstrength <value>
+
+gameoverdelaytime
+    args  : string
+    usage : gameoverdelaytime <value>
+
+gamepaddeadzone
+    args  : string
+    usage : gamepaddeadzone <value>
+
+gamepadxsensitivity
+    args  : string
+    usage : gamepadxsensitivity <value>
+
+gamepadysensitivity
+    args  : string
+    usage : gamepadysensitivity <value>
+
+gccollect
+    args  : none
+    usage : gccollect
+
+getgamemode
+    args  : string
+    usage : getgamemode <value>
+
+getlayerculldistance
+    args  : string
+    usage : getlayerculldistance <value>
+
+getsaveid
+    args  : string  [RedLoader-only]
+    usage : getsaveid
+    does  : Prints the current save id. SOURCE-VERIFIED (SonsSdk).
+
+gibradius
+    args  : string
+    usage : gibradius <value>
+
+godmode
+    args  : string
+    usage : godmode on|off
+    does  : Invincibility. VERIFIED: a felled tree dealt no damage with it on.
+
+golfcartnetworkdebug
+    args  : string
+    usage : golfcartnetworkdebug <value>
+
+goto
+    args  : string
+    usage : goto <value>
+
+gotocoords
+    args  : string
+    usage : gotocoords <value>
+
+gotoforce
+    args  : string
+    usage : gotoforce <value>
+
+gotopickup
+    args  : string  [RedLoader-only]
+    usage : gotopickup <name>
+    does  : Finds a matching world pickup and teleports you to it. SOURCE-VERIFIED (SonsSdk).
+
+gototag
+    args  : string
+    usage : gototag <value>
+
+gotozone
+    args  : string  [arg type inferred]
+    usage : gotozone <value>
+
+gravity
+    args  : string
+    usage : gravity <value>
+
+greebledrockscollision
+    args  : string
+    usage : greebledrockscollision <value>
+
+greeblelayer
+    args  : string
+    usage : greeblelayer <value>
+
+greebles
+    args  : string
+    usage : greebles <value>
+
+greeblezone
+    args  : string
+    usage : greeblezone <value>
+
+heallocalplayer
+    args  : string
+    usage : heallocalplayer <value>
+
+help
+    args  : none
+    usage : help
+
+hideworldposfor
+    args  : string
+    usage : hideworldposfor <value>
+
+hitlocalplayer
+    args  : string
+    usage : hitlocalplayer <value>
+
+igniteradius
+    args  : string
+    usage : igniteradius <value>
+
+importlinkedstructuresfromfile
+    args  : string  [arg type inferred]
+    usage : importlinkedstructuresfromfile <value>
+
+inspectgo
+    args  : string
+    usage : inspectgo <value>
+
+instantbookbuild
+    args  : string  [arg type inferred]
+    usage : instantbookbuild <value>
+
+instantrespawnhere
+    args  : string
+    usage : instantrespawnhere <value>
+
+inventoryspeedsensitivity
+    args  : string
+    usage : inventoryspeedsensitivity <value>
+
+invertlook
+    args  : string
+    usage : invertlook <value>
+
+invisible
+    args  : string
+    usage : invisible <value>
+
+iswaterdisplacementenabled
+    args  : string
+    usage : iswaterdisplacementenabled <value>
+
+itemgroupinteractionaudio
+    args  : string
+    usage : itemgroupinteractionaudio <value>
+
+joinsteamlobby
+    args  : string
+    usage : joinsteamlobby <value>
+
+jumptimeofday
+    args  : string
+    usage : jumptimeofday <value>
+
+kickplayers
+    args  : string
+    usage : kickplayers <value>
+
+killlocalplayer
+    args  : none
+    usage : killlocalplayer
+
+killradius
+    args  : string
+    usage : killradius <value>
+
+knockdownlocalplayer
+    args  : string
+    usage : knockdownlocalplayer <value>
+
+lightninghittreechance
+    args  : string  [arg type inferred]
+    usage : lightninghittreechance <value>
+
+lightninghittreemustbeinfrontplayer
+    args  : string  [arg type inferred]
+    usage : lightninghittreemustbeinfrontplayer <value>
+
+lightninginterval
+    args  : string  [arg type inferred]
+    usage : lightninginterval <value>
+
+listachievements
+    args  : string  [arg type inferred]
+    usage : listachievements <value>
+
+listactiveentities
+    args  : string
+    usage : listactiveentities <value>
+
+listdeathmarkers
+    args  : string
+    usage : listdeathmarkers <value>
+
+listgowithlayer
+    args  : string
+    usage : listgowithlayer <value>
+
+listobjects
+    args  : string
+    usage : listobjects <value>
+
+load
+    args  : string
+    usage : load <value>
+
+loaddebugconsolemod
+    args  : string
+    usage : loaddebugconsolemod <value>
+
+loadmacros
+    args  : string
+    usage : loadmacros <value>
+
+loadplayer
+    args  : string
+    usage : loadplayer <value>
+
+loadscene
+    args  : string
+    usage : loadscene <value>
+
+loadscenesingle
+    args  : string
+    usage : loadscenesingle <value>
+
+localvoicedebugging
+    args  : string
+    usage : localvoicedebugging <value>
+
+locktimeofday
+    args  : string
+    usage : locktimeofday <value>
+
+loddebugbillboards
+    args  : string
+    usage : loddebugbillboards <value>
+
+loddebugmaterials
+    args  : string
+    usage : loddebugmaterials <value>
+
+loddebugranges
+    args  : string
+    usage : loddebugranges <value>
+
+lodforce2ddistance
+    args  : string
+    usage : lodforce2ddistance <value>
+
+lodforce3ddistance
+    args  : string
+    usage : lodforce3ddistance <value>
+
+logging
+    args  : string
+    usage : logging <value>
+
+loghack
+    args  : string
+    usage : loghack <value>
+
+logshowerrors
+    args  : string
+    usage : logshowerrors <value>
+
+logshowinfo
+    args  : string
+    usage : logshowinfo <value>
+
+logshownone
+    args  : string
+    usage : logshownone <value>
+
+logshowwarnings
+    args  : string
+    usage : logshowwarnings <value>
+
+logtextures
+    args  : string
+    usage : logtextures <value>
+
+logworldobjectlocatormanagerdata
+    args  : string
+    usage : logworldobjectlocatormanagerdata <value>
+
+materialsnapshot
+    args  : string
+    usage : materialsnapshot <value>
+
+meshcollidermeshlog
+    args  : string
+    usage : meshcollidermeshlog <value>
+
+mipmapstreaming
+    args  : string
+    usage : mipmapstreaming <value>
+
+mipmapstreamingbudget
+    args  : string
+    usage : mipmapstreamingbudget <value>
+
+mipmapstreamingdebug
+    args  : string
+    usage : mipmapstreamingdebug <value>
+
+mipmapstreamingdiscard
+    args  : string
+    usage : mipmapstreamingdiscard <value>
+
+mousexsensitivity
+    args  : string
+    usage : mousexsensitivity <value>
+
+mouseysensitivity
+    args  : string
+    usage : mouseysensitivity <value>
+
+navgraphforceupdate
+    args  : string
+    usage : navgraphforceupdate <value>
+
+netanimator
+    args  : string
+    usage : netanimator <value>
+
+netskinnedbones
+    args  : string
+    usage : netskinnedbones <value>
+
+netspawnplayer
+    args  : string
+    usage : netspawnplayer <value>
+
+networktransformlodupdate
+    args  : string
+    usage : networktransformlodupdate <value>
+
+newfogrendering
+    args  : string
+    usage : newfogrendering <value>
+
+noforest
+    args  : string  [RedLoader-only]
+    usage : noforest
+    does  : Removes Trees, Bushes and SmallTree objects. SOURCE-VERIFIED (SonsSdk).
+
+oceancolliderdebug
+    args  : string
+    usage : oceancolliderdebug <value>
+
+openmacrosfolder
+    args  : string
+    usage : openmacrosfolder <value>
+
+outputsnappointstofile
+    args  : string  [arg type inferred]
+    usage : outputsnappointstofile <value>
+
+physicsupdatetime
+    args  : string
+    usage : physicsupdatetime <value>
+
+placestructure
+    args  : string  [RedLoader-only]
+    usage : placestructure <name>
+    does  : Places a structure. SOURCE-VERIFIED (SonsSdk).
+
+playcutscene
+    args  : string  [RedLoader-only]
+    usage : playcutscene <name>
+    does  : Plays a named cutscene; reports "Couldn't play cutscene" on a bad name. SOURCE-VERIFIED (SonsSdk).
+
+playdeathcutscene
+    args  : string
+    usage : playdeathcutscene <value>
+
+playdeathmarker
+    args  : string
+    usage : playdeathmarker <value>
+
+playdeathmarkerindex
+    args  : string
+    usage : playdeathmarkerindex <value>
+
+playeranimparams
+    args  : string
+    usage : playeranimparams <value>
+
+playerdebugcamera
+    args  : string
+    usage : playerdebugcamera <value>
+
+playerinterruptkeys
+    args  : string
+    usage : playerinterruptkeys <value>
+
+playerkillstats
+    args  : string
+    usage : playerkillstats <value>
+
+playernetanimator
+    args  : string
+    usage : playernetanimator <value>
+
+playerstriggertraps
+    args  : string
+    usage : playerstriggertraps <value>
+
+playervisibility
+    args  : string
+    usage : playervisibility <value>
+
+playgameover
+    args  : none
+    usage : playgameover
+
+playrecording
+    args  : string  [arg type inferred]
+    usage : playrecording <value>
+
+postprocessingcomponent
+    args  : string
+    usage : postprocessingcomponent <value>
+
+profilersample
+    args  : string
+    usage : profilersample <value>
+
+profilersnapshot
+    args  : none
+    usage : profilersnapshot
+
+qualitytexture
+    args  : string
+    usage : qualitytexture <value>
+
+radiodebug
+    args  : string
+    usage : radiodebug <value>
+
+recordplayer
+    args  : string  [arg type inferred]
+    usage : recordplayer <value>
+
+refillcontainers
+    args  : string
+    usage : refillcontainers <value>
+
+refreshentities
+    args  : string
+    usage : refreshentities <value>
+
+regenhealth
+    args  : string
+    usage : regenhealth <value>
+
+regrowalltrees
+    args  : string
+    usage : regrowalltrees <value>
+
+removeallitems
+    args  : none
+    usage : removeallitems
+
+removedead
+    args  : string
+    usage : removedead <value>
+
+removeitem
+    args  : string
+    usage : removeitem <id|name>
+    does  : Removes one of the item from your inventory.
+
+removeliving
+    args  : string
+    usage : removeliving <value>
+
+removeshader
+    args  : string
+    usage : removeshader <value>
+
+renderspheres
+    args  : string
+    usage : renderspheres <value>
+
+replaceshader
+    args  : string
+    usage : replaceshader <value>
+
+reporterrorsnow
+    args  : string
+    usage : reporterrorsnow <value>
+
+reportlogsnow
+    args  : string
+    usage : reportlogsnow <value>
+
+reportwarningsnow
+    args  : string
+    usage : reportwarningsnow <value>
+
+resetachievement
+    args  : string  [arg type inferred]
+    usage : resetachievement <value>
+
+resetallachievements
+    args  : string  [arg type inferred]
+    usage : resetallachievements <value>
+
+resetheldanim
+    args  : string
+    usage : resetheldanim <value>
+
+resetinputaxes
+    args  : string  [arg type inferred]
+    usage : resetinputaxes <value>
+
+resetsettings
+    args  : string
+    usage : resetsettings <value>
+
+restoreallworldlocators
+    args  : string
+    usage : restoreallworldlocators <value>
+
+revivelocalplayer
+    args  : none
+    usage : revivelocalplayer
+
+robbycarry
+    args  : string
+    usage : robbycarry <value>
+
+robbyincutscenes
+    args  : string
+    usage : robbyincutscenes <value>
+
+robbystateinfo
+    args  : string
+    usage : robbystateinfo <value>
+
+rumbletest
+    args  : string
+    usage : rumbletest <value>
+
+samplefps
+    args  : string  [arg type inferred]
+    usage : samplefps <value>
+
+save
+    args  : string
+    usage : save <value>
+
+saveconsolepos
+    args  : string  [RedLoader-only]
+    usage : saveconsolepos
+    does  : Saves the console window position. SOURCE-VERIFIED (SonsSdk).
+
+saveplayer
+    args  : string
+    usage : saveplayer <value>
+
+saverecording
+    args  : string  [arg type inferred]
+    usage : saverecording <value>
+
+screwstructurerenderersoff
+    args  : string  [arg type inferred]
+    usage : screwstructurerenderersoff <value>
+
+screwstructurerendererson
+    args  : string  [arg type inferred]
+    usage : screwstructurerendererson <value>
+
+season
+    args  : string
+    usage : season <value>
+
+sendmessageto
+    args  : string
+    usage : sendmessageto <value>
+
+setcurrentday
+    args  : string
+    usage : setcurrentday <value>
+
+setdifficultymode
+    args  : string
+    usage : setdifficultymode <value>
+
+setexitedendgame
+    args  : string
+    usage : setexitedendgame <value>
+
+setfirsttimeseenitem
+    args  : string
+    usage : setfirsttimeseenitem <value>
+
+setgamemode
+    args  : string
+    usage : setgamemode <value>
+
+setgamesetupsetting
+    args  : string
+    usage : setgamesetupsetting <value>
+
+setgametimespeed
+    args  : string
+    usage : setgametimespeed <value>
+
+setinventorypercent
+    args  : string
+    usage : setinventorypercent <value>
+
+setlayerculldistance
+    args  : string
+    usage : setlayerculldistance <value>
+
+setlookrotation
+    args  : string
+    usage : setlookrotation <value>
+
+setopeningcrash
+    args  : string
+    usage : setopeningcrash <value>
+
+setplayerdataflag
+    args  : string
+    usage : setplayerdataflag <value>
+
+setplayerrace
+    args  : string
+    usage : setplayerrace <value>
+
+setproperty
+    args  : string
+    usage : setproperty <value>
+
+setsetting
+    args  : string
+    usage : setsetting <value>
+
+setspeakermode
+    args  : string
+    usage : setspeakermode <value>
+
+setstat
+    args  : string
+    usage : setstat <value>
+
+setstrengthlevel
+    args  : string  [arg type inferred]
+    usage : setstrengthlevel <value>
+
+setterrainaniso
+    args  : string
+    usage : setterrainaniso <value>
+
+settimeofday
+    args  : string
+    usage : settimeofday <value>
+
+setwindintensity
+    args  : string
+    usage : setwindintensity <value>
+
+setworldobjectstaterange
+    args  : string
+    usage : setworldobjectstaterange <value>
+
+shockradius
+    args  : string
+    usage : shockradius <value>
+
+showactivelights
+    args  : string
+    usage : showactivelights <value>
+
+showbutterflyinfo
+    args  : string
+    usage : showbutterflyinfo <value>
+
+showcollisionobjectnames
+    args  : string
+    usage : showcollisionobjectnames <value>
+
+showdebugzones
+    args  : string  [arg type inferred]
+    usage : showdebugzones <value>
+
+showfps
+    args  : string
+    usage : showfps on|off
+    does  : Toggles the FPS overlay. VERIFIED: executed both ways.
+
+showhud
+    args  : string
+    usage : showhud <value>
+
+showinworldui
+    args  : string
+    usage : showinworldui <value>
+
+showmeshmaterialnames
+    args  : string
+    usage : showmeshmaterialnames <value>
+
+showmeshobjectnames
+    args  : string
+    usage : showmeshobjectnames <value>
+
+showmeshtrianglecounts
+    args  : string
+    usage : showmeshtrianglecounts <value>
+
+showobjectlocation
+    args  : string
+    usage : showobjectlocation <value>
+
+showprojectiletrails
+    args  : string
+    usage : showprojectiletrails <value>
+
+showstimuli
+    args  : string
+    usage : showstimuli <value>
+
+showtriggercollision
+    args  : string
+    usage : showtriggercollision <value>
+
+showui
+    args  : string
+    usage : showui <value>
+
+showvitals
+    args  : string
+    usage : showvitals <value>
+
+showworldobjects
+    args  : string
+    usage : showworldobjects <value>
+
+showworldposfor
+    args  : string
+    usage : showworldposfor <value>
+
+skinnedmeshesinfo
+    args  : string
+    usage : skinnedmeshesinfo <value>
+
+skunksmell
+    args  : string
+    usage : skunksmell <value>
+
+slapchop
+    args  : string
+    usage : slapchop <value>
+
+sleepcooldown
+    args  : string
+    usage : sleepcooldown <value>
+
+spawnedobjectstats
+    args  : string
+    usage : spawnedobjectstats <value>
+
+spawnfallingtree
+    args  : string
+    usage : spawnfallingtree <value>
+
+spawnitem
+    args  : string
+    usage : spawnitem <id|name>
+    does  : Spawns the item on the ground near you. VERIFIED. Refuses items whose canBeSpawned flag is false (see the NOT SPAWNABLE list).
+
+spawnrenderspheres
+    args  : string
+    usage : spawnrenderspheres <value>
+
+spawnworldobject
+    args  : string  [arg type inferred]
+    usage : spawnworldobject <value>
+
+speedyrun
+    args  : string
+    usage : speedyrun <value>
+
+sprinttoggle
+    args  : string
+    usage : sprinttoggle <value>
+
+steamtimelinedebug
+    args  : string  [arg type inferred]
+    usage : steamtimelinedebug <value>
+
+stonehack
+    args  : string
+    usage : stonehack on|off
+    does  : Unlimited stone. Confirmed working by the user.
+
+superjump
+    args  : string
+    usage : superjump <value>
+
+survival
+    args  : string
+    usage : survival <value>
+
+targetframerate
+    args  : string
+    usage : targetframerate <value>
+
+terrainparallax
+    args  : string
+    usage : terrainparallax <value>
+
+terrainpixelerror
+    args  : string
+    usage : terrainpixelerror <value>
+
+terrainrender
+    args  : string
+    usage : terrainrender <value>
+
+terrainrendersimple
+    args  : string
+    usage : terrainrendersimple <value>
+
+terraintess
+    args  : string
+    usage : terraintess <value>
+
+terraintessdist
+    args  : string
+    usage : terraintessdist <value>
+
+testautobuildeffigy
+    args  : string
+    usage : testautobuildeffigy <value>
+
+testeventmask
+    args  : none
+    usage : testeventmask
+
+testforcelod
+    args  : string  [arg type inferred]
+    usage : testforcelod <value>
+
+timeofdayconnectiondebug
+    args  : string
+    usage : timeofdayconnectiondebug <value>
+
+timeofdaydebug
+    args  : string
+    usage : timeofdaydebug <value>
+
+timescale
+    args  : string
+    usage : timescale <value>
+
+timmypathdebug
+    args  : string
+    usage : timmypathdebug <value>
+
+togglefiredebug
+    args  : string  [arg type inferred]
+    usage : togglefiredebug <value>
+
+togglefpsdisplay
+    args  : string
+    usage : togglefpsdisplay <value>
+
+togglego
+    args  : string
+    usage : togglego <value>
+
+togglegrabberdebug
+    args  : string  [arg type inferred]
+    usage : togglegrabberdebug <value>
+
+togglegrass
+    args  : string  [RedLoader-only]
+    usage : togglegrass
+    does  : Toggles grass rendering. SOURCE-VERIFIED (SonsSdk).
+
+toggleocclusionculling
+    args  : string
+    usage : toggleocclusionculling <value>
+
+toggleoverlay
+    args  : none
+    usage : toggleoverlay
+
+toggleplayerstats
+    args  : none
+    usage : toggleplayerstats
+
+togglescrewlinkingdebug
+    args  : string  [arg type inferred]
+    usage : togglescrewlinkingdebug <value>
+
+togglestructureresistancedebug
+    args  : string  [arg type inferred]
+    usage : togglestructureresistancedebug <value>
+
+togglesuperstructureroomsvisualdebug
+    args  : string  [arg type inferred]
+    usage : togglesuperstructureroomsvisualdebug <value>
+
+togglevsync
+    args  : string
+    usage : togglevsync <value>
+
+toggleworkscheduler
+    args  : string
+    usage : toggleworkscheduler <value>
+
+treecutsimulatebolt
+    args  : string
+    usage : treecutsimulatebolt <value>
+
+treefallcontactinfo
+    args  : string
+    usage : treefallcontactinfo <value>
+
+treemapdistributionfilter
+    args  : string
+    usage : treemapdistributionfilter <value>
+
+treeocclusionbonus
+    args  : string
+    usage : treeocclusionbonus <value>
+
+treeradius
+    args  : string
+    usage : treeradius <value>
+
+treescutall
+    args  : string
+    usage : treescutall <value>
+
+uiforcelastupdate
+    args  : string
+    usage : uiforcelastupdate <value>
+
+uiforcelateupdate
+    args  : string
+    usage : uiforcelateupdate <value>
+
+unloadscene
+    args  : string
+    usage : unloadscene <value>
+
+unloadunusedassets
+    args  : none
+    usage : unloadunusedassets
+
+unlockseason
+    args  : string
+    usage : unlockseason <value>
+
+userigidbodyrotation
+    args  : string
+    usage : userigidbodyrotation <value>
+
+virginiaincutscenes
+    args  : string
+    usage : virginiaincutscenes <value>
+
+virginiasentiment
+    args  : string  [RedLoader-only]
+    usage : virginiasentiment <value>
+    does  : Sets Virginia's sentiment. SOURCE-VERIFIED (SonsSdk).
+
+virginiavisit
+    args  : string  [RedLoader-only]
+    usage : virginiavisit <value>
+    does  : Triggers a Virginia visit. SOURCE-VERIFIED (SonsSdk).
+
+virtualpickupdebug
+    args  : string
+    usage : virtualpickupdebug <value>
+
+virtualplayers
+    args  : string
+    usage : virtualplayers <value>
+
+vitalsshowdebug
+    args  : string  [arg type inferred]
+    usage : vitalsshowdebug <value>
+
+workscheduler
+    args  : string
+    usage : workscheduler <value>
+
+worldboundsdebug
+    args  : string  [arg type inferred]
+    usage : worldboundsdebug <value>
+
+worldgroupid
+    args  : string
+    usage : worldgroupid <value>
+
+worldobjectdisableall
+    args  : string  [arg type inferred]
+    usage : worldobjectdisableall <value>
+
+worldobjectenableall
+    args  : string  [arg type inferred]
+    usage : worldobjectenableall <value>
+
+wsscaling
+    args  : string
+    usage : wsscaling <value>
+
+xfreecam
+    args  : string  [RedLoader-only]
+    usage : xfreecam
+    does  : RedLoader's free camera. SOURCE-VERIFIED (SonsSdk).
+
+
+====================================================================================================
+HIDDEN COMMANDS (0)
+====================================================================================================
+None. This was checked directly rather than assumed: the console keeps two separate
+tables - every command it can dispatch, and the subset its autocomplete offers while
+you type. Those were compared inside a running game after forcing the autocomplete
+table to build. Every dispatchable command appears in autocomplete, so the game hides
+nothing from you. (The autocomplete table is in fact LARGER, because it also lists
+commands registered at runtime that are not plain methods.)
+
+
+====================================================================================================
+REMOVED COMMANDS (18) - present in older community lists, gone from this build
+====================================================================================================
+These are absent from the live console registry. Typing them does nothing.
+
+  addallbookpages
+  addallstoryitems
+  addvirginia
+  aidodgetest
+  aipause
+  ammohack - no surviving machinery found.
+  applydefaultmaterials
+  buildhack - the command is gone, but the underlying InfiniteItemHack/InstantBuild properties still exist on StructureCraftingSystem and can be driven by a mod.
+  combatteststart
+  enablecheats
+  listitems
+  listitemswithtags
+  removeallstoryitems
+  spawnpickup - superseded by spawnitem.
+  trailer3
+  veganmode
+  virginiagiveitem
+  vrfps
+
+====================================================================================================
+HOW THIS DIFFERS FROM THE COMMONLY-CIRCULATED LISTS
+====================================================================================================
+  - Item count is 308, not 352. The widely-copied lists carry debug/unrealized
+    ids that do not exist in this build.
+  - Item names here are the game's own display names. Several commonly-listed names
+    are wrong: id 78 is 'Log' (internal Log_Legacy), id 355 is 'Pistol' not
+    'Compact Pistol', id 431 is 'Firefighter Axe' not 'Fire Axe'.
+  - Stack ceilings are included (ammo caps at 1000, logs at 2). Most lists omit them.
+  - 418 commands are listed, against the usual ~314. Lists built by scanning for
+    _<name> methods miss every command registered at runtime - including addcharacter.
+  - 16 of the listed commands come from RedLoader and DO NOT EXIST in the vanilla game.
+    They are tagged [RedLoader-only].
+  - Unverified descriptions and filler text are omitted rather than repeated.
+

@@ -1,0 +1,2608 @@
+{
+  "generated": "2026-07-27",
+  "gameBuildId": "20228174",
+  "sources": [
+    "Il2CppInterop proxies",
+    "Il2CppDumper DummyDll"
+  ],
+  "total": 358,
+  "verifiedByBoth": 358,
+  "commands": [
+    {
+      "name": "addAllItems",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "additem",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "additemswithtag",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "addmemory",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiAngerLevel",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiAnimSpeed",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiArmorLevel",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiArmorTier",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiAttentionDebug",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiDisable",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiDummy",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiForceStrafe",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiGodMode",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiJumpDebug",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiKnockdownDisable",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiLogNavCuts",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiLogSpawnTimes",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiMemoryAdjust",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiPoolStats",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiRadar",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiRunWorldEvent",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiShowAnims",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiShowAnimTags",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiShowAudio",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiShowDebug",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiShowDebugCamera",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiShowEventMemory",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiShowHealth",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiShowNavGraph",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiShowPaths",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiShowPlayerInfluences",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiShowStats",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiShowSurvivalStats",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiShowThoughts",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiStatAdjust",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiStructureLog",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiTestSleep",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiThought",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiThoughtNoCooldown",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiVailStats",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiVerboseLog",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiVillageClosest",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiVisionDebug",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiWorldEventStats",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiWorldStats",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "aiZoneStats",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "allowAsync",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "animalLimitMult",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "animalsEnabled",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "anisoEnabled",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "anisoMinMax",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "areaShadow",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "astar",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "audio2dTest",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "audioDebug",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "audioDescription",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "audioParameter",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "audioPlayEvent",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "autoDriveRaft",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "billboardEnabled",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "billboardIgnoreChanges",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "billboardLogAliveChanges",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "blockPlayerFinalDeath",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "breakObjects",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "buildermode",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "burnBodyRadius",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "cameraDlss",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "cameraFov",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "capsulemode",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "caveLight",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "characterLods",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "cheats",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "checkAttachedEntities",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "checkExitMenu",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "checkFrozenEntities",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "clear",
+      "args": "none",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "clearallsettings",
+      "args": "none",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "clearAudioParameters",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "clearBushRadius",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "clearmidactionflag",
+      "args": "none",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "cloudEnable",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "cloudFactor",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "cloudShadowsEnable",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "colorGrade",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "count",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "countGoWithlayer",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "counttag",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "createLight",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "creepyAttackParty",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "creepyVillage",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "crouchToggle",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "dagDebug",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "dagTestMode",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "dagTestNext",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "dagTestPrev",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "damageDebug",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "damageRadius",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "deathCount",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "debugPlayerHitLog",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "debugPlayerMelee",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "demoMode",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "destroy",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "destroyRagdoll",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "destroyWildcard",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "diagRenderers",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "diggingClear",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "disablecomponent",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "disableGameObjectTester",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "disablego",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "disableGoWildcard",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "disableScene",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "disconnectPlayer",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "disconnectPlayers",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "dismemberRadius",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "doorClose",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "doorOpen",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "dumplobbyinfo",
+      "args": "none",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "dumpMeshInfo",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "dumpTransformInfo",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "duplicateObject",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "dynamicResCameraDebug",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "dynamicResolutionCycleTest",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "dynamicResolutionOverride",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "dynamicResolutionTarget",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "enableCollisionBasedKillBox",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "enablecomponent",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "enablego",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "enableScene",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "enableStructureGhosts",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "energyhack",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "equipitem",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "exposureSetSpeed",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "fakeDrown",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "fakeGpu",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "filteraudio",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "findObjectsWithShader",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "firstLookForce",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "fogFakeNotSupported",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "follow",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "followStop",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "footstepDebug",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "forceCloud",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "forceCloudProfile",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "forcePlayerExpression",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "forcerain",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "forceRemoveTrees",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "freecamera",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "gameOverDelayTime",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "gamePadDeadzone",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "gamePadXSensitivity",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "gamePadYSensitivity",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "gccollect",
+      "args": "none",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "getGameMode",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "getlayerculldistance",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "gibRadius",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "godmode",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "golfCartNetworkDebug",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "goto",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "gotoCoords",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "gotoforce",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "gototag",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "gravity",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "greebledRocksCollision",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "greebleLayer",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "greebles",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "greebleZone",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "heallocalplayer",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "help",
+      "args": "none",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "hideworldposfor",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "hitlocalplayer",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "igniteRadius",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "inspectgo",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "instantRespawnHere",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "inventorySpeedSensitivity",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "invertLook",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "invisible",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "isWaterDisplacementEnabled",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "itemGroupInteractionAudio",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "joinSteamLobby",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "jumpTimeOfDay",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "kickPlayers",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "killlocalplayer",
+      "args": "none",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "killRadius",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "knockdownLocalPlayer",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "listActiveEntities",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "listDeathMarkers",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "listGoWithlayer",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "listObjects",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "load",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "loadDebugConsoleMod",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "loadMacros",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "loadplayer",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "loadScene",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "loadSceneSingle",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "localVoiceDebugging",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "lockTimeOfDay",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "lodDebugBillboards",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "lodDebugMaterials",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "lodDebugRanges",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "lodForce2DDistance",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "lodForce3DDistance",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "logging",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "loghack",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "logShowErrors",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "logShowInfo",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "logShowNone",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "logShowWarnings",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "logTextures",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "logWorldObjectLocatorManagerData",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "materialSnapshot",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "meshColliderMeshLog",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "mipmapStreaming",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "mipmapStreamingBudget",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "mipmapStreamingDebug",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "mipmapStreamingDiscard",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "mouseXSensitivity",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "mouseYSensitivity",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "navGraphForceUpdate",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "netAnimator",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "netSkinnedBones",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "netSpawnPlayer",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "networkTransformLodUpdate",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "newFogRendering",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "oceanColliderDebug",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "openmacrosfolder",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "physicsUpdateTime",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "playDeathCutscene",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "playDeathMarker",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "playDeathMarkerIndex",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "playerAnimParams",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "playerDebugCamera",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "playerInterruptKeys",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "playerKillStats",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "playernetanimator",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "playersTriggerTraps",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "playerVisibility",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "playGameOver",
+      "args": "none",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "postProcessingComponent",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "profilersample",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "profilersnapshot",
+      "args": "none",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "qualityTexture",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "radioDebug",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "refillContainers",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "refreshEntities",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "regenhealth",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "regrowAllTrees",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "removeAllItems",
+      "args": "none",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "removeDead",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "removeitem",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "removeLiving",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "removeShader",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "renderSpheres",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "replaceShader",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "reporterrorsnow",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "reportlogsnow",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "reportwarningsnow",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "resetHeldAnim",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "resetSettings",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "restoreAllWorldLocators",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "revivelocalplayer",
+      "args": "none",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "robbyCarry",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "robbyInCutscenes",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "robbyStateInfo",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "rumbleTest",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "save",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "saveplayer",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "season",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "sendMessageTo",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "setCurrentDay",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "setDifficultyMode",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "setExitedEndGame",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "setFirstTimeSeenItem",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "setGameMode",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "setGameSetupSetting",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "setGameTimeSpeed",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "setinventorypercent",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "setlayerculldistance",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "setLookRotation",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "setOpeningCrash",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "setPlayerDataFlag",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "setPlayerRace",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "setProperty",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "setSetting",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "setSpeakerMode",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "setstat",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "setTerrainAniso",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "setTimeOfDay",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "setWindIntensity",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "setWorldObjectStateRange",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "shockRadius",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "showActiveLights",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "showButterflyInfo",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "showCollisionObjectNames",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "showFps",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "showHud",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "showInWorldUi",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "showMeshMaterialNames",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "showMeshObjectNames",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "showMeshTriangleCounts",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "showObjectLocation",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "showProjectileTrails",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "showStimuli",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "showTriggerCollision",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "showui",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "showVitals",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "showWorldObjects",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "showworldposfor",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "skinnedMeshesInfo",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "skunkSmell",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "slapchop",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "sleepCooldown",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "spawnedObjectStats",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "spawnFallingTree",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "spawnitem",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "spawnRenderSpheres",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "speedyrun",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "sprintToggle",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "stonehack",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "superJump",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "survival",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "targetFrameRate",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "terrainParallax",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "terrainPixelError",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "terrainRender",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "terrainRenderSimple",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "terrainTess",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "terrainTessDist",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "testAutoBuildEffigy",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "testeventmask",
+      "args": "none",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "timeOfDayConnectionDebug",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "timeOfDayDebug",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "timescale",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "timmyPathDebug",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "toggleFPSDisplay",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "togglego",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "toggleOcclusionCulling",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "toggleOverlay",
+      "args": "none",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "togglePlayerStats",
+      "args": "none",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "toggleVSync",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "toggleWorkScheduler",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "treeCutSimulateBolt",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "treeFallContactInfo",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "treeMapDistributionFilter",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "treeOcclusionBonus",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "treeRadius",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "treesCutAll",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "uiForceLastUpdate",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "uiForceLateUpdate",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "unloadScene",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "unloadUnusedAssets",
+      "args": "none",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "unlockSeason",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "useRigidBodyRotation",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "virginiaInCutscenes",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "virtualPickupDebug",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "virtualPlayers",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "workscheduler",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "worldGroupId",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    },
+    {
+      "name": "wsscaling",
+      "args": "string",
+      "inInterop": true,
+      "inDecompile": true,
+      "verified": true
+    }
+  ],
+  "absentFromBuild": [
+    "addallbookpages",
+    "addallstoryitems",
+    "addvirginia",
+    "aidodgetest",
+    "aighostplayer",
+    "aipause",
+    "ammohack",
+    "applydefaultmaterials",
+    "buildhack",
+    "combatteststart",
+    "enablecheats",
+    "listitems",
+    "listitemswithtags",
+    "removeallstoryitems",
+    "spawnpickup",
+    "trailer3",
+    "veganmode",
+    "virginiagiveitem",
+    "virginiasentiment",
+    "virginiavisit",
+    "vrfps"
+  ],
+  "undocumentedInOldFile": [
+    "aiattentiondebug",
+    "ailognavcuts",
+    "ailogspawntimes",
+    "aishowanimtags",
+    "aishowaudio",
+    "aivisiondebug",
+    "autodriveraft",
+    "billboardlogalivechanges",
+    "burnbodyradius",
+    "cheats",
+    "colorgrade",
+    "creepyattackparty",
+    "dagdebug",
+    "dagtestmode",
+    "dagtestnext",
+    "dagtestprev",
+    "damageradius",
+    "doorclose",
+    "dooropen",
+    "dumpmeshinfo",
+    "dumptransforminfo",
+    "dynamicrescameradebug",
+    "enablecollisionbasedkillbox",
+    "equipitem",
+    "fakedrown",
+    "fakegpu",
+    "fogfakenotsupported",
+    "gibradius",
+    "golfcartnetworkdebug",
+    "greeblelayer",
+    "greebles",
+    "greeblezone",
+    "inventoryspeedsensitivity",
+    "iswaterdisplacementenabled",
+    "itemgroupinteractionaudio",
+    "localvoicedebugging",
+    "logworldobjectlocatormanagerdata",
+    "materialsnapshot",
+    "meshcollidermeshlog",
+    "mipmapstreamingdebug",
+    "networktransformlodupdate",
+    "newfogrendering",
+    "oceancolliderdebug",
+    "playerkillstats",
+    "playerstriggertraps",
+    "regrowalltrees",
+    "resetheldanim",
+    "restoreallworldlocators",
+    "robbystateinfo",
+    "setfirsttimeseenitem",
+    "setplayerdataflag",
+    "setterrainaniso",
+    "shockradius",
+    "showvitals",
+    "skinnedmeshesinfo",
+    "skunksmell",
+    "sleepcooldown",
+    "stonehack",
+    "testautobuildeffigy",
+    "timmypathdebug",
+    "treemapdistributionfilter",
+    "uiforcelastupdate",
+    "uiforcelateupdate",
+    "virtualpickupdebug",
+    "virtualplayers"
+  ]
+}

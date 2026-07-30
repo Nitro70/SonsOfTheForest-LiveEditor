@@ -1,0 +1,742 @@
+SONS OF THE FOREST - ITEM REFERENCE (generated from the live game)
+==============================================================================
+Generated : 2026-07-27
+Source    : live ItemDatabaseManager (ground truth, not a community list)
+Build     : Steam buildid 20228174 / Unity 2022.2.16f1
+Total     : 308 items
+
+Display Name = what the game calls it on screen (use this in the app/UI).
+Internal     = engine identifier; the console sometimes wants this form.
+Max          = stack ceiling.  Spawn = has a world pickup prefab.
+Unique       = each instance is tracked separately (weapons/tools).
+==============================================================================
+
+ID     DISPLAY NAME                       INTERNAL                       MAX   SPAWN  FLAGS
+--------------------------------------------------------------------------------------------------------------
+78     Log                                Log_Legacy                     2     yes    legacy, tags:Log
+340    Guitar                             Guitar                         1     yes    unique
+341    Binoculars                         Binoculars                     1     yes    unique
+346    Shotgun Rail                       ShotgunRail                    1     yes    unique, tags:trailer3
+351    Grab Bag                           GrabBag                        1     yes    unique
+353    Stun Gun                           StunGun                        1     yes    unique, tags:Taser
+354    Night Vision Goggles               NightVisionGoggles             1     yes    unique
+355    Pistol                             CompactPistol                  1     yes    unique, tags:Pistol/StartingItem/trailer3/PistolParts
+356    Modern Axe                         ModernAxe                      1     yes    unique, tags:Axe/Modern Axe
+358    Shotgun                            ShotgunPumpAction              1     yes    unique, tags:Shotgun/StartingItem/trailer3/
+359    Machete                            Machete2                       1     yes    unique, tags:StartingItem
+360    Compound Bow                       TacticalBow                    1     yes    unique
+361    Rifle                              Rifle                          1     yes    unique
+362    9mm Ammo                           9mmAmmo                        1000  yes    tags:StartingItem
+363    Slug Ammo                          SlugAmmo                       1000  yes    
+364    Buckshot Ammo                      BuckshotAmmo                   1000  yes    tags:StartingItem
+365    Crossbow                           Crossbow                       1     yes    unique
+367    Katana                             Katana                         1     yes    unique
+368    Crossbow Bolt                      CrossbowAmmoBolt               20    yes    tags:Bolt
+369    Stun Gun Ammo                      StunGunAmmo                    1000  yes    
+370    9mm Ammo                           PistolAmmoBox                  1     yes    tags:PistolParts
+371    Buckshot Ammo                      ShotgunAmmoBoxBuckshot         1     yes    tags:trailer3
+372    Slug Ammo                          ShotgunAmmoBoxSlug             1     yes    
+373    Carbon Fiber Arrow                 TacticalBowAmmo                20    yes    unique, tags:StartingItem
+374    Silencer                           PistolSuppressor               1     yes    unique, tags:PistolParts
+375    Laser Sight                        LaserSightMod                  1     yes    unique, tags:PistolParts
+376    Pistol Rail                        CompactPistolRail              1     yes    unique, tags:PistolParts
+378    Flashlight Attachment              FlashlightMod                  1     yes    unique, tags:PistolParts
+379    Tactical Axe                       TacticalAxe                    1     yes    unique, tags:StartingItem
+380    Utility Knife                      CombatKnife                    1     no     unique
+381    Grenade                            Grenade                        5     yes    tags:trailer3
+382    Grenade                            GrenadeAmmo                    10    yes    
+383    Rifle Rail                         RifleRailMod                   1     yes    unique
+386    Revolver                           Revolver                       1     yes    unique
+387    Rifle Ammo                         RifleAmmo                      1000  yes    
+388    Molotov                            Molotov                        6     yes    tags:StartingItem/trailer3
+389    Molotov                            MolotovAmmo                    10    yes    tags:StartingItem
+390    Printer Resin                      3dPrinterResin                 1000  yes    tags:Resin
+391    Red Mask                           RedMask                        1     yes    unique
+392    Stick                              Stick                          20    yes    tags:StartingItem/trailer3
+393    Rock                               Rock                           10    yes    tags:StartingItem/trailer3
+394    Chainsaw                           TacticalChainsaw               1     yes    unique, tags:Chainsaw
+395    Plank                              LogPlank                       4     yes    
+396    Stun Baton                         TaserStick                     1     yes    unique, tags:TazerStick/StartingItem/StunBaton
+397    Shiitake                           ShiitakeMushroom               20    yes    tags:Mushroom
+398    King Oyster                        KingOysterMushroom             20    yes    tags:Mushroom
+399    Hydnum Repandum                    HydnumRepandumMushroom         20    yes    tags:Mushroom
+400    Fly Amanita                        FlyAmanitaMushroom             20    yes    tags:Mushroom
+401    Turtle Egg                         TurtleEgg                      4     yes    
+402    Backpack                           Backpack                       1     yes    unique
+403    Rope                               Rope                           10    yes    
+405    Bone                               Bone                           16    yes    
+406    Quarter Log                        QuarterLog                     2     yes    
+408    Half Log                           HalfLog                        2     yes    
+409    Three Quarter Log                  ThreeQuarterLog                2     yes    
+410    Watch                              Wristwatch                     10    yes    
+412    GPS Tracker                        GPSTracker                     1     yes    unique, tags:StartingItem
+413    Lighter                            PlasmaLighter                  1     yes    unique
+414    Vodka Bottle                       VodkaBottle                    6     yes    tags:trailer3
+415    Cloth                              Cloth                          1000  yes    
+416    Circuit Board                      CircuitBoard                   6     yes    tags:trailer3
+417    Sticky Bomb                        TimeBomb                       3     yes    tags:StartingItem
+418    Wire                               Wire                           100   yes    
+419    Duct Tape                          DuctTape                       100   yes    
+420    C4 Brick                           C4Brick                        3     yes    
+421    Ramen Noodles                      RamenNoodles                   4     yes    tags:trailer3
+422    Repair Tool                        RepairTool                     1     yes    unique, tags:StartingItem
+423    Corporate Line                     NovelA                         1     yes    unique
+424    Puffton - On Creating an Empire    NovelB                         1     yes    unique
+425    Crunchie Wunchies                  CerealBox                      4     yes    
+426    Printed Flask                      3dPrintedFlask                 1     yes    unique
+428    Printed Sled                       3dPrintedSled                  1     yes    unique
+430    Skull                              Skull                          3     yes    
+431    Firefighter Axe                    FireAxe                        1     yes    unique
+432    Can Opener                         CanOpener                      1     yes    unique, tags:trailer3
+433    Meat                               Meat                           7     yes    unique
+434    Canned Food                        CannedFood                     6     yes    tags:trailer3
+435    Gold Mask                          GoldMask                       1     yes    unique
+436    Fish                               Fish                           3     yes    unique, tags:trailer3
+437    Meds                               Pills                          6     yes    
+438    MRE Pack                           MrePack                        6     yes    tags:trailer3
+439    Energy Drink                       EnergyDrink                    10    yes    tags:Soda
+440    Flare                              Flare                          10    yes    
+441    Energy Bar                         EnergyBar                      10    yes    
+443    Crafted Bow                        CraftedBow                     1     yes    unique, tags:StartingItem
+444    Rebreather                         Rebreather                     1     yes    unique
+445    Blueberries                        Blueberries                    20    yes    
+446    Twinberries                        Twinberries                    20    yes    
+447    Salmonberries                      Salmonberries                  20    yes    
+448    Snowberries                        Snowberries                    20    yes    
+449    Devil's Club                       DevilsClub                     20    yes    
+450    Horsetail                          Horsetail                      20    yes    
+451    Aloe Vera                          AloeVera                       20    yes    
+452    Yarrow                             Yarro                          20    yes    
+453    Fireweed                           Fireweed                       20    yes    
+454    Arrowleaf                          ArrowleafBalsamroot            20    yes    
+455    Health Mix                         HealthMix                      3     yes    
+456    Health Mix +                       HealthMixPlus                  3     yes    
+457    Stun Gun Ammo                      StunGunAmmoBox                 1     yes    
+459    Slingshot                          Slingshot                      1     yes    unique
+461    Energy Mix                         EnergyMix                      3     yes    tags:trailer3
+462    Energy Mix +                       EnergyMixPlus                  3     yes    tags:trailer3
+464    Cat Food                           CatFood                        1     yes    unique
+465    Chicory                            Chicory                        20    yes    
+466    Oyster                             Oyster                         5     yes    unique
+467    Album Cover                        AlbumCover                     1     yes    unique
+468    Cross                              Cross                          1     yes    unique
+469    Air Tank                           AirCanister                    4     yes    unique
+471    Flashlight                         Flashlight                     1     yes    unique, tags:trailer3
+472    Animal Hide                        DeerHide                       5     yes    
+473    Leaf Armor                         LeafArmour                     10    yes    
+474    Crafted Spear                      CraftedSpear                   5     yes    unique, tags:StartingItem/trailer3
+476    Small Rock                         SmallRock                      30    yes    tags:StartingItem
+477    Crafted Club                       CraftedClub                    1     yes    unique, tags:StartingItem
+479    Feather                            Feather                        1000  yes    
+480    Arm                                SeveredArm                     2     yes    unique, tags:arm
+481    Leg                                SeveredLeg                     2     yes    unique, tags:leg
+482    Head                               SeveredHead                    1     yes    unique, tags:head
+483    Emergency Pack                     EmergencyPack                  1     yes    unique
+484    Leaves                             Leaf                           1000  yes    
+485    Shovel                             Shovel                         1     yes    unique, tags:StartingItem
+486    Walkie Talkie                      WalkieTalkie                   1     yes    unique
+487    Pajamas                            SilkPyjamas                    1     yes    unique
+489    Tactical Pants                     TacticalPants                  1     yes    unique
+490    Hoodie                             Hoodie                         1     yes    unique
+491    Blazer                             OldJacket                      1     yes    unique
+492    Tuxedo                             Tuxedo                         1     yes    unique
+493    Leather Jacket                     LeatherJacket                  1     yes    unique
+494    Bone Armor                         BoneArmour                     10    yes    
+495    Tactical Jacket                    TacticalJacket                 2     yes    
+496    Cash                               Money                          1000000 yes    
+499    Wetsuit                            Wetsuit                        1     yes    unique
+500    Winter Jacket                      PuffyJacket                    1     yes    unique
+501    Boots                              TacticalBoots                  1     no     unique
+502    Coins                              Coins                          1000  yes    
+503    Torch                              Torch                          1     yes    unique
+504    Tarp                               Tarp                           5     yes    
+506    Turtle Shell                       TurtleShell                    3     yes    unique
+507    Stone Arrow                        CraftedArrow                   20    yes    unique
+508    Skin Pouch                         LootPouch                      6     yes    unique
+509    Holosprings Pamphlet               BunkerPamphlet                 1     yes    unique
+517    Cooking Pot                        CookingPot                     1     yes    unique
+518    Paper Target                       PaperTarget                    50    yes    
+519    Hide Armor                         DeerHideArmour                 10    yes    
+520    Structure Element                  Structure Element              -1    yes    unique
+521    Note                               EmailPrintoutCaveLighting      1     yes    
+522    Rope Gun                           RopeGun                        1     yes    unique
+523    Zipline Rope                       ZiplineRope                    4     yes    
+524    Golf Ball                          GolfBall                       8     yes    
+525    Putter                             GolfPutter                     1     yes    unique
+526    Note                               EmailPrintoutMrPuffyWill       1     yes    
+527    Batteries                          Batteries                      6     yes    
+528    Note                               EmailPrintoutMrPuffyFinancial  1     yes    
+529    GPS Locator                        GPSLocator                     10    yes    unique
+534    Note                               EmailPrintoutGolfA             1     yes    
+535    Note                               EmailPrintoutGolfB             1     yes    
+536    Note                               EmailPrintoutGolfC             1     yes    
+537    Note                               EmailPrintoutGolfD             1     yes    
+538    Note                               EmailPrintoutPaintingA         1     yes    
+539    Note                               EmailPrintoutAstrologyA        1     yes    
+540    Note                               EmailPrintoutAstrologyB        1     yes    
+541    Note                               EmailPrintoutAstrologyC        1     yes    
+542    Note                               EmailPrintoutPoliticianA       1     yes    
+543    Note                               EmailPrintoutPoliticianB       1     yes    
+544    Note                               EmailPrintoutPoliticianC       1     yes    
+545    Note                               EmailPrintoutBalletA           1     yes    
+546    Note                               EmailPrintoutSqueakyShoesA     1     yes    
+547    Note                               EmailPrintoutSqueakyShoesB     1     yes    
+548    Note                               EmailPrintoutSqueakyShoesC     1     yes    
+552    Blueprint                          BlueprintBook                  1     yes    unique
+553    Tech Mesh                          TechMesh                       10    yes    
+554    Tech Armor                         TechArmour                     10    yes    
+555    Track Suit                         VirginiaTrackSuit              1     yes    unique
+556    Dress                              VirginiaDress                  1     yes    unique
+557    Leather Suit                       VirginiaLeatherSuit            1     yes    unique
+558    Camouflage Suit                    VirginiaCamoSuit               1     yes    unique
+560    Printed Grappling Hook             3dPrintedGrapplingHook         2     yes    
+562    Holoville Notice                   HolovilleNoticeA               1     yes    unique
+563    Holoville Notice                   HolovilleNoticeB               1     yes    unique
+564    Holoville Notice                   HolovilleNoticeC               1     yes    unique
+565    Holoville Notice                   HolovilleNoticeD               1     yes    unique
+566    Maintenance Keycard                KeyCardMaintenance             1     yes    tags:Keycard
+567    Guest Keycard                      KeyCardGuest                   1     yes    tags:Keycard
+568    VIP Keycard                        KeyCardVIP                     1     yes    tags:Keycard
+569    Brain Bite                         FoodCubeBrain                  1     yes    
+570    Steak Bite                         FoodCubeSteak                  1     yes    
+571    Bacon Bite                         FoodCubeSteakAndBacon          1     yes    
+572    Ancient Armor                      GoldenArmour                   1     yes    unique
+574    Rescued                            NovelC                         1     yes    unique
+575    Parallel Universes                 NovelD                         1     yes    unique
+576    Quarter Plank                      QuarterLogPlank                4     yes    
+577    Half Plank                         HalfLogPlank                   4     yes    
+578    Three Quarter Plank                ThreeQuarterLogPlank           4     yes    
+589    Guide Book                         TutorialBook                   1     yes    unique
+590    Radio                              Radio                          1     yes    unique
+592    Creepy Skin                        CreepySkin                     10    yes    
+593    Creepy Armor                       CreepyArmour                   10    yes    
+594    Guarana Berries                    GuaranaBerries                 20    yes    
+595    Blackberries                       Blackberries                   20    yes    
+596    AloeVera Seed                      AloeVeraSeed                   20    yes    
+597    Arrowleaf Seed                     ArrowleafSeed                  20    yes    
+598    Blackberry Seed                    BlackberrySeed                 20    yes    
+599    Blueberry Seed                     BlueberrySeed                  20    yes    
+600    DevilsClub Seed                    DevilsClubSeed                 20    yes    
+601    Fireweed Seed                      FireweedSeed                   20    yes    
+602    Guarana Seed                       GuaranaSeed                    20    yes    
+603    Horsetail Seed                     HorsetailSeed                  20    yes    
+604    Salmonberry Seed                   SalmonberrySeed                20    yes    
+605    Chicory Seed                       ChicorySeed                    20    yes    
+606    Yarrow Seed                        YarroSeed                      20    yes    
+611    Note                               NumbersPrintout                1     yes    
+612    Note                               NewspaperCutout                1     no     
+613    Note                               NewspaperCutoutOutbid          1     no     
+614    Note                               EmailPrintoutGovernmentA       1     yes    
+615    Note                               EmailPrintoutGovernmentB       1     yes    
+616    Note                               EmailPrintoutGovernmentC       1     yes    
+617    Note                               StockPricePrintout             1     yes    
+618    3d Printed Arrow                   3dPrintedArrow                 20    yes    unique
+619    Swim Suit                          VirginiaSwimSuit               1     yes    unique
+626    Foldable Glider                    HangGlider                     1     yes    unique
+627    MrPuffton Table Card               MrPufftonTableCard             1     no     unique
+628    Mrs Puffton Table Card             MrsPufftonTableCard            1     no     unique
+630    Knight V                           KnightV                        1     yes    unique
+631    The Realm Beyond                   NovelF                         1     yes    unique
+633    Cult Pamphlet                      CultPamphlet                   1     yes    unique
+634    Solar Panel                        SolarPanel                     3     yes    
+635    Light Bulb                         LightBulb                      8     yes    
+637    Action Camera                      ActionCamera                   1     no     unique
+639    Space Suit                         SpaceSuit                      1     yes    unique
+640    Stone                              Stone                          4     yes    
+642    Duck Head                          DuckHead                       1     yes    
+643    Eagle Head                         EagleHead                      1     yes    
+644    Small Turtle Head                  SmallTurtleHead                1     yes    
+646    Rabbit Head                        RabbitHead                     1     yes    
+647    Squirrel Head                      SquirrelHead                   1     yes    
+648    Seagull Head                       SeagullHead                    1     yes    
+650    Turtle Head                        TurtleHead                     1     yes    
+651    Deer Head                          DeerHead                       1     yes    
+652    Moose Head                         MooseHead                      1     yes    
+653    Note                               PersonalNoteA                  1     yes    
+654    Note                               PersonalNoteB                  1     yes    
+655    Note                               PersonalNoteC                  1     yes    
+657    3D Printed GPS Case                3dPrintedGpsLocatorCase        5     yes    
+661    Golf Cart Battery                  GolfCartBattery                3     yes    
+662    ???                                ArtifactPieceA                 1     no     unique, tags:artifacts
+663    Pickaxe                            Pickaxe                        1     yes    unique
+664    Solafite Ore                       SolafiteOre                    20    yes    
+665    Blueprint                          BlueprintItemPlating           1     no     
+666    Blueprint                          BlueprintPoweredCross          1     no     
+667    ???                                ArtifactPieceB                 1     no     unique, tags:artifacts
+668    ???                                ArtifactPieceC                 1     no     unique, tags:artifacts
+669    ???                                ArtifactPieceD                 1     no     unique, tags:artifacts
+670    Blueprint                          BlueprintGoreChair             1     no     
+671    Blueprint                          BlueprintGoreCouch             1     no     
+672    Blueprint                          BlueprintUberTrap              1     no     
+674    Note                               OldNoteA                       1     no     
+675    Note                               OldNoteB                       1     no     
+676    Note                               OldNoteC                       1     no     
+677    Note                               FishingEmailA                  1     no     
+678    Note                               FishingEmailB                  1     no     
+679    Blueprint                          BlueprintGrindTrap             1     no     
+680    Blueprint                          BlueprintSpotlight             1     no     
+681    Blueprint                          BlueprintClock                 1     no     
+682    Blueprint                          BlueprintSpinTrap              1     no     
+684    Note                               OldNoteE                       1     no     
+685    Note                               OldNoteD                       1     no     
+686    Note                               CultSignF                      1     no     
+687    Note                               PufftonEmailA                  1     no     
+688    Blueprint                          BlueprintSpearThrowerTrap      1     no     
+689    ???                                ArtifactPieceE                 1     no     unique, tags:artifacts
+690    Notes                              StoryPages                     1     no     
+691    Note                               OldNoteF                       1     no     
+692    Note                               FishingEmailC                  1     no     
+693    Note                               BunkerMapA                     1     no     
+694    Note                               JianyuEmailPrintoutA           1     no     
+695    Note                               CultSignG                      1     no     
+696    Note                               CultSignH                      1     no     
+697    Cult Sign                          CultSignI                      1     no     
+698    Cult Sign                          CultSignJ                      1     no     
+699    Cult Sign                          CultSignK                      1     no     
+701    Blueprint                          BlueprintLegLamp               1     no     
+703    Priest Outfit                      PriestOutfit                   1     yes    unique
+705    Circus Pamphlet                    CircusPamphlet                 1     yes    unique
+706    Note                               NewspaperDCutout               1     no     
+707    Artifact                           Artifact                       1     no     unique
+708    ???                                ArtifactPieceF                 1     no     unique, tags:artifacts
+709    Blueprint                          BlueprintTeleporter            1     no     
+710    Blueprint                          BlueprintRepelShrine           1     no     
+711    Blueprint                          BlueprintAttractShrine         1     no     
+712    ???                                ArtifactPieceG                 1     no     unique, tags:artifacts
+713    Blueprint                          BlueprintPlaterCounter         1     no     
+714    Blueprint                          BlueprintGoldArmorPlater       1     no     
+715    Raccoon Head                       RaccoonHead                    1     yes    
+716    Note                               BiblePaperD                    1     no     
+717    Note                               OldNoteG                       1     no     
+718    Note                               PersonalNoteE                  1     no     
+719    Note                               PersonalNoteF                  1     no     
+720    Note                               PersonalNoteG                  1     no     
+721    Note                               BiblePaperScrapA               1     no     
+722    Note                               PufftonEmailB                  1     no     
+723    Note                               PufftonEmailC                  1     no     
+724    Twinberry Seed                     TwinberrySeed                  20    yes    
+725    Snowberry Seed                     SnowberrySeed                  20    yes    
+726    Blueprint                          BlueprintHangGliderLauncher    1     no     
+727    Solafite Armor                     SolafiteArmour                 10    yes    
+728    Rabbit​                            AliveRabbit                    1     yes    unique, no-store
+729    Skunk Head​                        SkunkHead                      1     yes    
+749    Stewardess Dress​                  FlightAttendantUniform         1     yes    unique
+
+==============================================================================
+BY TYPE
+==============================================================================
+
+[0]  (1)
+  469   Air Tank
+
+[Ammo]  (1)
+  382   Grenade
+
+[Clothing, Droppable]  (4)
+  501   Boots
+  619   Swim Suit
+  495   Tactical Jacket
+  489   Tactical Pants
+
+[Clothing, Droppable, UniqueItem]  (15)
+  572   Ancient Armor
+  491   Blazer
+  558   Camouflage Suit
+  556   Dress
+  490   Hoodie
+  493   Leather Jacket
+  557   Leather Suit
+  487   Pajamas
+  703   Priest Outfit
+  639   Space Suit
+  749   Stewardess Dress​
+  555   Track Suit
+  492   Tuxedo
+  499   Wetsuit
+  500   Winter Jacket
+
+[CraftingMaterial]  (1)
+  483   Emergency Pack
+
+[CraftingMaterial, Droppable]  (11)
+  657   3D Printed GPS Case
+  472   Animal Hide
+  527   Batteries
+  420   C4 Brick
+  434   Canned Food
+  416   Circuit Board
+  484   Leaves
+  560   Printed Grappling Hook
+  508   Skin Pouch
+  553   Tech Mesh
+  414   Vodka Bottle
+
+[CraftingMaterial, Droppable, Ammo, Craftable]  (3)
+  618   3d Printed Arrow
+  373   Carbon Fiber Arrow
+  507   Stone Arrow
+
+[CraftingMaterial, Droppable, Craftable]  (4)
+  502   Coins
+  419   Duct Tape
+  479   Feather
+  410   Watch
+
+[CraftingMaterial, Droppable, UniqueItem, Craftable, Extension]  (5)
+  378   Flashlight Attachment
+  375   Laser Sight
+  376   Pistol Rail
+  346   Shotgun Rail
+  374   Silencer
+
+[CraftingMaterial, Edible, Droppable]  (8)
+  451   Aloe Vera
+  454   Arrowleaf
+  465   Chicory
+  449   Devil's Club
+  453   Fireweed
+  400   Fly Amanita
+  450   Horsetail
+  452   Yarrow
+
+[CraftingMaterial, Edible, Droppable, Craftable]  (1)
+  448   Snowberries
+
+[CraftingMaterial, UniqueItem]  (1)
+  432   Can Opener
+
+[Droppable]  (21)
+  370   9mm Ammo
+  596   AloeVera Seed
+  597   Arrowleaf Seed
+  598   Blackberry Seed
+  599   Blueberry Seed
+  371   Buckshot Ammo
+  605   Chicory Seed
+  592   Creepy Skin
+  600   DevilsClub Seed
+  601   Fireweed Seed
+  602   Guarana Seed
+  603   Horsetail Seed
+  390   Printer Resin
+  604   Salmonberry Seed
+  372   Slug Ammo
+  725   Snowberry Seed
+  664   Solafite Ore
+  457   Stun Gun Ammo
+  506   Turtle Shell
+  724   Twinberry Seed
+  606   Yarrow Seed
+
+[Droppable, Ammo]  (4)
+  368   Crossbow Bolt
+  389   Molotov
+  387   Rifle Ammo
+  369   Stun Gun Ammo
+
+[Droppable, Ammo, Craftable]  (4)
+  362   9mm Ammo
+  364   Buckshot Ammo
+  363   Slug Ammo
+  523   Zipline Rope
+
+[Droppable, Armor]  (1)
+  727   Solafite Armor
+
+[Droppable, Craftable]  (1)
+  496   Cash
+
+[Droppable, Craftable, Armor]  (5)
+  494   Bone Armor
+  593   Creepy Armor
+  519   Hide Armor
+  473   Leaf Armor
+  554   Tech Armor
+
+[Droppable, Craftable, Extension]  (1)
+  383   Rifle Rail
+
+[Edible, Droppable]  (13)
+  571   Bacon Bite
+  595   Blackberries
+  569   Brain Bite
+  425   Crunchie Wunchies
+  436   Fish
+  594   Guarana Berries
+  399   Hydnum Repandum
+  398   King Oyster
+  438   MRE Pack
+  421   Ramen Noodles
+  397   Shiitake
+  570   Steak Bite
+  401   Turtle Egg
+
+[Edible, Droppable, Craftable]  (13)
+  445   Blueberries
+  464   Cat Food
+  441   Energy Bar
+  439   Energy Drink
+  461   Energy Mix
+  462   Energy Mix +
+  455   Health Mix
+  456   Health Mix +
+  433   Meat
+  437   Meds
+  466   Oyster
+  447   Salmonberries
+  446   Twinberries
+
+[Equippable]  (14)
+  637   Action Camera
+  552   Blueprint
+  713   Blueprint
+  351   Grab Bag
+  562   Holoville Notice
+  563   Holoville Notice
+  564   Holoville Notice
+  565   Holoville Notice
+  528   Note
+  539   Note
+  617   Note
+  719   Note
+  690   Notes
+  520   Structure Element
+
+[Equippable, Clothing]  (1)
+  402   Backpack
+
+[Equippable, Clothing, Droppable, UniqueItem, Craftable]  (1)
+  444   Rebreather
+
+[Equippable, Craftable]  (3)
+  412   GPS Tracker
+  589   Guide Book
+  413   Lighter
+
+[Equippable, Craftable, Weapon]  (1)
+  422   Repair Tool
+
+[Equippable, Craftable, Weapon, Axe]  (1)
+  379   Tactical Axe
+
+[Equippable, CraftingMaterial, Droppable]  (2)
+  403   Rope
+  430   Skull
+
+[Equippable, CraftingMaterial, Droppable, Ammo, RangedWeapon, Craftable, Weapon]  (1)
+  476   Small Rock
+
+[Equippable, CraftingMaterial, Droppable, Craftable]  (3)
+  415   Cloth
+  471   Flashlight
+  418   Wire
+
+[Equippable, CraftingMaterial, Droppable, RangedWeapon, Craftable, Weapon]  (2)
+  355   Pistol
+  358   Shotgun
+
+[Equippable, CraftingMaterial, Droppable, RangedWeapon, UniqueItem, Craftable, Weapon]  (1)
+  365   Crossbow
+
+[Equippable, CraftingMaterial, Droppable, UniqueItem]  (7)
+  662   ???
+  667   ???
+  668   ???
+  669   ???
+  689   ???
+  708   ???
+  712   ???
+
+[Equippable, CraftingMaterial, Droppable, UniqueItem, Craftable, Weapon]  (1)
+  394   Chainsaw
+
+[Equippable, CraftingMaterial, Droppable, Weapon]  (3)
+  405   Bone
+  393   Rock
+  392   Stick
+
+[Equippable, CraftingMaterial, Weapon]  (1)
+  380   Utility Knife
+
+[Equippable, Droppable]  (33)
+  651   Deer Head
+  642   Duck Head
+  643   Eagle Head
+  626   Foldable Glider
+  661   Golf Cart Battery
+  408   Half Log
+  577   Half Plank
+  482   Head
+  630   Knight V
+  635   Light Bulb
+  78    Log
+  652   Moose Head
+  518   Paper Target
+  395   Plank
+  428   Printed Sled
+  406   Quarter Log
+  576   Quarter Plank
+  728   Rabbit​
+  646   Rabbit Head
+  715   Raccoon Head
+  590   Radio
+  391   Red Mask
+  648   Seagull Head
+  729   Skunk Head​
+  644   Small Turtle Head
+  634   Solar Panel
+  647   Squirrel Head
+  640   Stone
+  504   Tarp
+  409   Three Quarter Log
+  578   Three Quarter Plank
+  650   Turtle Head
+  486   Walkie Talkie
+
+[Equippable, Droppable, Ammo, Projectile, RangedWeapon, Craftable, Weapon]  (2)
+  474   Crafted Spear
+  417   Sticky Bomb
+
+[Equippable, Droppable, Ammo, RangedWeapon, Weapon]  (2)
+  440   Flare
+  524   Golf Ball
+
+[Equippable, Droppable, Craftable]  (2)
+  707   Artifact
+  529   GPS Locator
+
+[Equippable, Droppable, Craftable, Weapon]  (2)
+  477   Crafted Club
+  503   Torch
+
+[Equippable, Droppable, RangedWeapon, Craftable, Weapon]  (2)
+  443   Crafted Bow
+  388   Molotov
+
+[Equippable, Droppable, RangedWeapon, UniqueItem, Weapon]  (6)
+  360   Compound Bow
+  386   Revolver
+  361   Rifle
+  522   Rope Gun
+  459   Slingshot
+  353   Stun Gun
+
+[Equippable, Droppable, RangedWeapon, Weapon]  (1)
+  381   Grenade
+
+[Equippable, Droppable, UniqueItem]  (6)
+  341   Binoculars
+  468   Cross
+  435   Gold Mask
+  354   Night Vision Goggles
+  695   Note
+  696   Note
+
+[Equippable, Droppable, UniqueItem, Craftable, Weapon, Axe]  (1)
+  356   Modern Axe
+
+[Equippable, Droppable, UniqueItem, Weapon]  (5)
+  340   Guitar
+  367   Katana
+  359   Machete
+  485   Shovel
+  396   Stun Baton
+
+[Equippable, Droppable, UniqueItem, Weapon, Axe]  (2)
+  431   Firefighter Axe
+  663   Pickaxe
+
+[Equippable, Droppable, Weapon]  (1)
+  525   Putter
+
+[Equippable, Edible, Droppable]  (2)
+  517   Cooking Pot
+  426   Printed Flask
+
+[Equippable, Edible, Droppable, Ammo, Projectile, RangedWeapon, Craftable, Weapon]  (1)
+  480   Arm
+
+[Equippable, Edible, Droppable, Ammo, Projectile, RangedWeapon, Weapon]  (1)
+  481   Leg
+
+[Equippable, UniqueItem]  (79)
+  467   Album Cover
+  666   Blueprint
+  714   Blueprint
+  711   Blueprint
+  710   Blueprint
+  709   Blueprint
+  701   Blueprint
+  688   Blueprint
+  682   Blueprint
+  681   Blueprint
+  680   Blueprint
+  679   Blueprint
+  672   Blueprint
+  671   Blueprint
+  670   Blueprint
+  665   Blueprint
+  726   Blueprint
+  705   Circus Pamphlet
+  423   Corporate Line
+  633   Cult Pamphlet
+  697   Cult Sign
+  698   Cult Sign
+  699   Cult Sign
+  567   Guest Keycard
+  509   Holosprings Pamphlet
+  566   Maintenance Keycard
+  627   MrPuffton Table Card
+  628   Mrs Puffton Table Card
+  526   Note
+  684   Note
+  685   Note
+  686   Note
+  687   Note
+  535   Note
+  691   Note
+  692   Note
+  693   Note
+  521   Note
+  694   Note
+  721   Note
+  720   Note
+  718   Note
+  534   Note
+  536   Note
+  717   Note
+  716   Note
+  706   Note
+  722   Note
+  537   Note
+  678   Note
+  540   Note
+  547   Note
+  548   Note
+  611   Note
+  612   Note
+  613   Note
+  614   Note
+  615   Note
+  616   Note
+  538   Note
+  653   Note
+  654   Note
+  546   Note
+  544   Note
+  723   Note
+  543   Note
+  542   Note
+  541   Note
+  674   Note
+  675   Note
+  676   Note
+  677   Note
+  545   Note
+  655   Note
+  575   Parallel Universes
+  424   Puffton - On Creating an Empire
+  574   Rescued
+  631   The Realm Beyond
+  568   VIP Keycard
+
