@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/ToniMacaroni/RedLoader/main/MetadataSchema.json",
   "id": "LiveEditor",
   "author": "Nitro70",
-  "version": "0.1.0",
+  "version": "1.1.0",
   "description": "Live session control bridge (TCP/NDJSON) for external tooling",
   "gameVersion": "1.0.0",
   "loaderVersion": "0.8.6",
